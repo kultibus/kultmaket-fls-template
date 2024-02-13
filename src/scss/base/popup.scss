@@ -89,25 +89,32 @@ body::after {
 //========================================================================================================================================================
 
 .popup-message {
+	max-width: rem(767);
+	margin: 0 auto;
 	&__content {
 		background-color: $white;
 		border-radius: 20px;
-		padding: 15px 20px;
-		max-width: rem(767);
+		// padding: 15px 20px;
+		padding: 50px 20px;
 		transition: visibility 0.5s ease 0s,
 		opacity 0.5s ease 0s,
 		transform 0.5s ease 0s;
+		width: 100%;
+		// display: flex;
+		// align-items: center;
+		// flex-direction: column;
 		.popup-show & {
 			transition: visibility 0.5s ease 0.25s,
 			opacity 0.5s ease 0.25s,
 			transform 0.5s ease 0.25s;
 		}
 		@media (max-width:$mobileSmall){
-			padding: 15px 10px;
+			padding: 60px 10px;
 		}
 	}
 	&__body {
-		margin-bottom: 10px;
+		flex: 1 0 auto;
+		margin-bottom: 30px;
 	}
 	&__text {
 		text-align: center;
@@ -116,7 +123,8 @@ body::after {
 		display: flex;
 		justify-content: center;
 		button {
-			flex: 0 1 100px;
+			// flex: 0 1 100px;
+			flex: 0 1 50%;
 		}
 	}
 }

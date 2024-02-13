@@ -1,6 +1,7 @@
 .button {
 	display: inline-block;
-	@include adaptiveValue("font-size", 14, 12);
+	// @include adaptiveValue("font-size", 14, 12);
+	@include adaptiveValue("font-size", 16, 12);
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: math.div(18 , 14);

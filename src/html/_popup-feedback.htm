@@ -1,27 +1,41 @@
-
 <div id="feedback" aria-hidden="true" class="popup popup-feedback">
 	<div class="popup__wrapper">
 		<div class="popup__content popup-feedback__content">
 			<button data-close type="button" class="popup-feedback__close _icon-cross"></button>
 			<div class="popup__text popup-feedback__body">
-				<h2 class="popup-feedback__title subtitle-popup">Пожалуйста заполните форму для предварительного расчёта стоимости изготовления макета</h2>
+				<h2 class="popup-feedback__title subtitle-popup">Заполните пожалуйста форму и мы перезвоним в ближайшее время.
+				</h2>
 				<div class="popup-feedback__form form-popup">
-					<form  action="sendmail.php" data-ajax data-popup-message="#message" class="form-popup__body">
+					<!-- <form action="sendmail.php" data-ajax data-popup-message="#message" class="form-popup__body"> -->
+					<form action="sendmail.php" data-dev data-popup-message="#message" class="form-popup__body">
 						<ul class="form-popup__list">
-							<li class="form-popup__item"><input autocomplete="off" type="text" name="name" data-required="" placeholder="Имя" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><input autocomplete="off" type="text" name="company" placeholder="Компания" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><input autocomplete="off" type="tel" name="tel" data-required placeholder="Телефон" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><input autocomplete="off" type="email" name="email" placeholder="Почта" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><input autocomplete="off" type="text" name="sizes" data-required placeholder="Размеры макета" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><input autocomplete="off" type="text" name="timelimit" data-required placeholder="Срок изготовления макета" class="form-popup__input input-form"></li>
-							<li class="form-popup__item"><textarea name="message" placeholder="Дополнительные комментарии" class="form-popup__input input-form"></textarea></li>
+							<li class="form-popup__item"><input maxlength="20" autocomplete="off" type="text" name="name"
+									data-placeholder-nohide data-required placeholder="Ваше имя" class="form-popup__input input-form">
+							</li>
+							<!-- <li class="form-popup__item"><input autocomplete="off" type="text" name="company" placeholder="Компания"
+									class="form-popup__input input-form"></li> -->
+
+							<li class="form-popup__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
+									data-required="email" data-placeholder-nohide data-error="Формат номера: 8-9ХХ-ХХХ-ХХ-ХХ"
+									placeholder="Ваш номер телефона" class="form-popup__input input-form"></li>
+
+							<!-- <li class="form-popup__item"><input autocomplete="off" type="email" name="email" data-required
+									placeholder="Почта" class="form-popup__input input-form"></li> -->
+							<!-- <li class="form-popup__item"><input autocomplete="off" type="text" name="sizes" data-required
+									placeholder="Размеры макета" class="form-popup__input input-form"></li> -->
+							<!-- <li class="form-popup__item"><input autocomplete="off" type="text" name="timelimit" data-required
+									placeholder="Срок изготовления макета" class="form-popup__input input-form"></li> -->
+							<!-- <li class="form-popup__item"><textarea name="message" placeholder="Дополнительные комментарии"
+									class="form-popup__input input-form"></textarea></li> -->
 						</ul>
 						<div class="form-popup__button">
-							<button type="submit" class="form-popup__button button"><span>Заказать расчёт</span></button>
+							<button type="submit" class="form-popup__button button"><span>Отправить</span></button>
 						</div>
 						<div class="form-popup__checkbox checkbox">
-							<input id="formPopupAgreement" data-required checked type="checkbox" name="agreement" class="checkbox__input">
-							<label for="formPopupAgreement" class="checkbox__label _icon-checkmark">Я даю своё согласие на обработку персональных данных</label>
+							<input id="formPopupAgreement" data-required checked type="checkbox" name="agreement"
+								class="checkbox__input">
+							<label for="formPopupAgreement" class="checkbox__label _icon-checkmark">Я даю своё согласие на обработку
+								персональных данных</label>
 						</div>
 					</form>
 				</div>
@@ -29,4 +43,3 @@
 		</div>
 	</div>
 </div>
-

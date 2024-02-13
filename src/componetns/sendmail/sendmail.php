@@ -13,7 +13,7 @@
 	//От кого письмо
 	$mail->setFrom('from@kultmaket.ru', 'kultmaket.ru');
 	//Кому отправить
-	$mail->addAddress('workshop@kultmaket.ru');
+	$mail->addAddress('info@kultmaket.ru');
 	//Тема письма
 	$mail->Subject = 'Новый заказ на сайте';
 
