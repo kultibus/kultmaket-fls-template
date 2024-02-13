@@ -1,0 +1,58 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+//========================================================================================================================================================
+
+.contacts {
+	&__link {
+		font-size: rem(25);
+		text-transform: uppercase;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		span {
+			transition: all 0.3s ease 0s;
+			padding: 0px 0px 0px 5px;
+			font-size: rem(14);
+		}
+		&::before{
+			transition: all 0.6s ease 0s;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				&::before{
+					transform: rotateY(360deg);
+				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.subtitle-popup {
+	@include adaptiveValue("font-size", 22, 16);
+	font-weight: 600;
+	line-height: math.div(24 , 22);
+}
+
+//========================================================================================================================================================
+
+.title {
+	@include adaptiveValue("font-size", 30, 18);
+	line-height: math.div(45 , 30);
+	font-weight: 700;
+	letter-spacing: -1px;
+	text-align: center;
+}
+
+.subtitle {
+	@include adaptiveValue("font-size", 22, 14);
+	line-height: math.div(27 , 22);
+	font-weight: 600;
+}
+
+.text {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: math.div(22 , 18);
+	font-weight: 500;
+}

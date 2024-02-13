@@ -1,0 +1,38 @@
+.button {
+	display: inline-block;
+	@include adaptiveValue("font-size", 14, 12);
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: math.div(18 , 14);
+	border: em(1,14) solid $mainColor;
+	border-radius: em(30,14);
+	text-align: center;
+	padding: em(10, 14) em(10, 14);
+	transition: color 0.6s ease 0s, background-color 0.3s ease 0s;
+	box-shadow: 0 0 0px 0px rgba($mainColor, .4);
+	animation: pulse 1.5s infinite;
+	&_portf {
+		animation: none;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $white;
+			background-color: $mainColor;
+			animation: none;
+		}
+	}
+}
+
+@keyframes pulse {
+  0% {
+    transform: (scale(.98));
+  }
+  85% {
+    transform: (scale(1));
+    box-shadow: 0 0 50px 30px rgba($mainColor, 0);
+  }
+    100% {
+    transform: (scale(.98));
+    box-shadow: 0 0 0 0 rgba($mainColor, 0);
+  }
+}

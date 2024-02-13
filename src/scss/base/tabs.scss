@@ -1,0 +1,112 @@
+.tabs {
+	// .tabs__navigation
+	min-height: 380px;
+	padding: 0px 40px;
+	@media (max-width:$mobileSmall){
+		padding: 0px 10px;
+	}
+	
+	&__navigation {
+		display: flex;
+		justify-content: space-around;
+		gap: rem(15);
+		margin: 0px 0px 15px 0px;
+		@media (max-width:$mobileSmall){
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	// .tabs__title
+	&__title {
+		color: rgb(45, 45, 45);
+		border-radius: 50px;
+		border: 1px solid rgb(45, 45, 45);
+		padding: rem(10) rem(15);
+		position: relative;
+		top: 0;
+		box-shadow: 0px 6px 5px 1px #181818;
+		top: -6px;
+		color: #181818;
+		transition: background-color 0.4s ease 0s,
+		box-shadow 0.4s ease 0s,
+		top 0.4s ease 0s;
+		@media (max-width:$mobile){
+			border-radius: 20px;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				background-color: rgba(179, 179, 179, 0.836);
+			}
+		}
+		&._tab-active {
+			background-color: rgba(179, 179, 179, 0.836);
+			box-shadow: 0px 2px 1px 1px #181818;
+			top: -2px;
+		}
+	}
+	// .tabs__content
+	&__content {
+
+		padding: rem(10) rem(15);
+	}
+	// .tabs__body
+	&__body {
+		// max-width: rem(1000);
+		// margin: 0px auto;
+	}
+	&__text {
+		li {
+			position: relative;
+			padding: 0px 0px 0px 10px;
+			&:not(:last-child) {margin-bottom: em(10, 16);}
+			&::before{
+				content:'';
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				top: 7px;
+				left: -3px;
+				border-radius: 50%;
+				background-color: $mainColor;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//========================================================================================================================================================
+
+// .tabs {
+// 	// .tabs__navigation
+// 	&__navigation {
+// 		display: flex;
+// 	}
+// 	// .tabs__title
+// 	&__title {
+// 		border: 1px solid #eee;
+// 		padding: rem(10) rem(15);
+// 		border-radius: rem(5);
+// 		&._tab-active {
+// 			border: 1px solid #000;
+// 		}
+// 	}
+// 	// .tabs__content
+// 	&__content {
+// 		border: 1px solid #eee;
+// 		padding: rem(10) rem(15);
+// 	}
+// 	// .tabs__body
+// 	&__body {
+// 	}
+// }
