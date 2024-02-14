@@ -153,24 +153,24 @@ class ScrollWatcher {
 		if (targetElement.dataset.watch === 'some value') {
 			// пишем уникальную специфику
 		}
-		const parallax = document.querySelector('.parallax');
-		const parallaxBg = document.querySelector('.parallax__bg');
-		const parallaxTop = document.querySelector('.parallax__top');
-		const parallaxTitle = document.querySelector('.parallax__title');
+		// const parallax = document.querySelector('.parallax');
+		// const parallaxBg = document.querySelector('.parallax__bg');
+		// const parallaxTop = document.querySelector('.parallax__top');
+		// const parallaxTitle = document.querySelector('.parallax__title');
 		if (entry.isIntersecting) {
 			// Видим объект
 			function setParallaxItemStyle(scrollTopPercent) {
-				parallaxBg.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3}%);`;
-				parallaxTop.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3.5}%);`;
-				parallaxTitle.style.cssText = `transform: translate(0%,-${scrollTopPercent / 0.7}%);`;
+				// parallaxBg.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3}%);`;
+				// parallaxTop.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3.5}%);`;
+				// parallaxTitle.style.cssText = `transform: translate(0%,-${scrollTopPercent / 0.7}%);`;
 			}
 			const scrollTopPercent = window.scrollY / parallax.offsetHeight * 100;
 			setParallaxItemStyle(scrollTopPercent);
 		} else {
 			// Не видим объект
-			parallaxBg.style.cssText = `transform: translate(0%,0%);`;
-			parallaxTop.style.cssText = `transform: translate(0%,0%);`;
-			parallaxTitle.style.cssText = `transform: translate(0%,0%);`;
+			// parallaxBg.style.cssText = `transform: translate(0%,0%);`;
+			// parallaxTop.style.cssText = `transform: translate(0%,0%);`;
+			// parallaxTitle.style.cssText = `transform: translate(0%,0%);`;
 		}
 
 
