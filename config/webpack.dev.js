@@ -69,7 +69,6 @@ const config = {
       `${paths.src}/**/*.html`,
       `${paths.src}/**/*.pug`,
       `${paths.src}/**/*.htm`,
-      // `${paths.src}/**/*/*.htm`,
       `${paths.src}/img/**/*.*`,
     ],
   },

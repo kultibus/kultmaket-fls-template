@@ -17,7 +17,7 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 2%;
+  bottom: 5%;
   left: 0;
   width: 100%;
 }
@@ -50,17 +50,36 @@
 }
 
 .swiper-pagination-bullet {
-	width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 18px));
-  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 18px));
-	.touch & {
-		width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
-		height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
-	}
-	@media (max-width: 767px){
-		width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
-		height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
-		  
-	}
+  // width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 18px));
+  // height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 18px));
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 15px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 14px)
+  );
+  .touch & {
+    width: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 12px)
+    );
+    height: var(
+      --swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 12px)
+    );
+  }
+  @media (max-width: 767px) {
+    width: var(
+      --swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 12px)
+    );
+    height: var(
+      --swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 12px)
+    );
+  }
   display: inline-block;
   border-radius: 50%;
   background: var(--swiper-pagination-bullet-inactive-color, #fff);
@@ -101,7 +120,9 @@
     width: 8px;
     .swiper-pagination-bullet {
       display: inline-block;
-      transition: 200ms transform, 200ms top;
+      transition:
+        200ms transform,
+        200ms top;
     }
   }
 }
@@ -109,21 +130,28 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets {
   .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
-		@media (max-width: 767px){
-			margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
-		}
+    @media (max-width: 767px) {
+      // margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
+      margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 3px);
+    }
   }
   &.swiper-pagination-bullets-dynamic {
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     .swiper-pagination-bullet {
-      transition: 200ms transform, 200ms left;
+      transition:
+        200ms transform,
+        200ms left;
     }
   }
 }
-.swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: 200ms transform, 200ms right;
+.swiper-horizontal.swiper-rtl
+  > .swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition:
+    200ms transform,
+    200ms right;
 }
 /* Progress */
 .swiper-pagination-progressbar {
