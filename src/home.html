@@ -6,8 +6,11 @@
 
 <body>
 	<div class="wrapper">
+
 		@@include('html/_header.htm',{})
+
 		<main class="page">
+
 			<section id="parallax" class="page__parallax parallax" data-watch data-watch-threshold="prx">
 				<div id="parallax-navigator" class="parallax__navigator" data-watch="navigator"></div>
 				<div class="parallax__body" data-lp>
@@ -32,20 +35,27 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="page__content content">
 				<div class="content__image-ibg"><img src="@img/info-bg.jpg" alt="image"></div>
 				<div class="content__container">
+
 					<section id="info" class="content__info info">
 						<div class="info__navigator" data-watch="navigator" data-watch-threshold="0.4"></div>
+
 						<div class="info__body">
 							<h2 class="info__title title">Инфо</h2>
+
 							<div data-tabs class="info__tabs tabs">
+
 								<nav data-tabs-titles class="tabs__navigation">
 									<button type="button" class="tabs__title subtitle _tab-active">Какие макеты мы изготавливаем?</button>
 									<button type="button" class="tabs__title subtitle">Какой макет заказать?</button>
 								</nav>
+
 								<div data-tabs-body class="tabs__content">
 									<div class="tabs__body">
+
 										<ul class="tabs__text text">
 											<li>Стандартный макет представляет из себя детально проработанные масштабные модели зданий или
 												других объектов.</li>
@@ -63,6 +73,7 @@
 											</li>
 										</ul>
 									</div>
+
 									<div class="tabs__body">
 										<ul class="tabs__text text">
 											<li>Каждый макет, в зависимости от назначения, можно отнести к определенной категории.</li>
@@ -76,6 +87,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="info__advantages advantages">
 								<div class="advantages__slider swiper">
 									<div class="swiper-wrapper">
@@ -95,9 +107,12 @@
 							</div>
 						</div>
 					</section>
+
 					<section id="work-stages" class="content__work-stages work-stages">
 						<div class="work-stages__body">
+
 							<h2 class="work-stages__title title">Как мы работаем?</h2>
+
 							<div data-spollers class="work-stages__spollers spollers">
 								<div class="spollers__item">
 									<button type="button" data-spoller class="spollers__title subtitle"><span
@@ -106,12 +121,14 @@
 										макет. Изучаем техническую документацию, эскизы, фотографии объекта макетирования. Составляем
 										подробное техническое задание и заключаем договор на изготовление макета.</div>
 								</div>
+
 								<div class="spollers__item">
 									<button type="button" data-spoller class="spollers__title subtitle"><span
 											class="_icon-double-arrow"></span>Подготовительные работы</button>
 									<div class="spollers__body text">Используя полученную документацию, разрабатываем в соответствии с
 										утвержденным техническим заданием проект для последующего производства деталей макета.</div>
 								</div>
+
 								<div class="spollers__item">
 									<button type="button" data-spoller class="spollers__title subtitle"><span
 											class="_icon-double-arrow"></span>Производство и сборка</button>
@@ -120,6 +137,7 @@
 										подмакетник, защитный колпак и транспортировочный короб. Производим покраску, сборку, электрификацию
 										и установку соответствующих деталей на макет.</div>
 								</div>
+
 								<div class="spollers__item">
 									<button type="button" data-spoller class="spollers__title subtitle"><span
 											class="_icon-thumbs-up"></span>Сдача готового проекта</button>
@@ -132,15 +150,25 @@
 					</section>
 				</div>
 			</section>
+
 			<section class="page__portfolio portfolio">
 				<div class="portfolio__navigator" data-watch="navigator" data-watch-threshold="0.1"></div>
+
 				<div class="portfolio__container">
 					<div class="portfolio__title title">Проекты</div>
 					<div class="portfolio__items">
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
+								<!-- <a href="#" data-popup="#slider-prom-estet" class="item-portfolio__link-ibg"><img
+										src="@img/prom-estet/main.jpg" alt="image"></a> -->
 								<a href="#" data-popup="#slider-prom-estet" class="item-portfolio__link-ibg"><img
-										src="@img/prom-estet/main.jpg" alt="image"></a>
+										src="@img/prom-estet/main.jpg" alt="image">
+									<div class="item-portfolio__touch-slider">
+										@@include('html/sliders/_slider-prom-estet.htm',{})
+									</div>
+								</a>
 							</div>
 							<div class="item-portfolio__title subtitle">Архитектурный макет нефтеперерабатывающего комплекса с
 								подсветкой для компании ооо "Эстет"</div>
@@ -149,11 +177,13 @@
 								<p>Размер 1000мм на 700мм</p>
 								<p>Срок изготовления 20 дней</p>
 							</div>
-							<a href="#" data-popup="#slider-prom-estet" class="item-portfolio__link button button_portf"><span>Ещё
-									фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-prom-estet" class="item-portfolio__link button button_portf"><span>Ещё
+									фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-turbaza-buryatia" class="item-portfolio__link-ibg"><img
 										src="@img/turbaza-buryatia/main.jpg" alt="image"></a>
 							</div>
@@ -163,11 +193,13 @@
 								<p>Размер 1000мм на 1000мм</p>
 								<p>Срок изготовления 15 дней</p>
 							</div>
-							<a href="#" data-popup="#slider-turbaza-buryatia"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-turbaza-buryatia"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-prom-angarsk" class="item-portfolio__link-ibg"><img
 										src="@img/prom-angarsk/main.jpg" alt="image"></a>
 							</div>
@@ -177,11 +209,13 @@
 								<p>Размер 1250мм на 1500мм</p>
 								<p>Срок изготовления 7 дней</p>
 							</div>
-							<a href="#" data-popup="#slider-prom-angarsk" class="item-portfolio__link button button_portf"><span>Ещё
-									фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-prom-angarsk" class="item-portfolio__link button button_portf"><span>Ещё
+									фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-building-floor-irkutsk" class="item-portfolio__link-ibg"><img
 										src="@img/building-floor-irkutsk/main.jpg" alt="image"></a>
 							</div>
@@ -192,11 +226,13 @@
 								<p>Размер 1000мм на 600мм</p>
 								<p>Срок изготовления 27 дней</p>
 							</div>
-							<a href="#" data-popup="#slider-building-floor-irkutsk"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-building-floor-irkutsk"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-district-ulan-ude" class="item-portfolio__link-ibg"><img
 										src="@img/district-ulan-ude/main.jpg" alt="image"></a>
 							</div>
@@ -206,11 +242,13 @@
 								<p>Размер 1700мм на 2300мм</p>
 								<p>Срок изготовления 30 дней</p>
 							</div>
-							<a href="#" data-popup="#slider-district-ulan-ude"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-district-ulan-ude"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-warm-lakes" class="item-portfolio__link-ibg"><img
 										src="@img/warm-lakes/main.jpg" alt="image"></a>
 							</div>
@@ -221,11 +259,13 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-warm-lakes" class="item-portfolio__link button button_portf"><span>Ещё
-									фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-warm-lakes" class="item-portfolio__link button button_portf"><span>Ещё
+									фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-farm-factory" class="item-portfolio__link-ibg"><img
 										src="@img/farm-factory/main.jpg" alt="image"></a>
 							</div>
@@ -236,11 +276,13 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-farm-factory" class="item-portfolio__link button button_portf"><span>Ещё
-									фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-farm-factory" class="item-portfolio__link button button_portf"><span>Ещё
+									фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-cottage-village" class="item-portfolio__link-ibg"><img
 										src="@img/cottage-village/main.jpg" alt="image"></a>
 							</div>
@@ -250,11 +292,13 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-cottage-village"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-cottage-village"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-college-irkutsk" class="item-portfolio__link-ibg"><img
 										src="@img/college-irkutsk/main.jpg" alt="image"></a>
 							</div>
@@ -264,11 +308,13 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-college-irkutsk"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-college-irkutsk"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-mountains-village" class="item-portfolio__link-ibg"><img
 										src="@img/mountains-village/main.jpg" alt="image"></a>
 							</div>
@@ -278,11 +324,13 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-mountains-village"
-								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-mountains-village"
+								class="item-portfolio__link button button_portf"><span>Ещё фото...</span></a> -->
 						</div>
+
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<a href="#" data-popup="#slider-bazhir-village" class="item-portfolio__link-ibg"><img
 										src="@img/bazhir-village/main.jpg" alt="image"></a>
 							</div>
@@ -293,8 +341,8 @@
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
 							</div>
-							<a href="#" data-popup="#slider-bazhir-village" class="item-portfolio__link button button_portf"><span>Ещё
-									фото...</span></a>
+							<!-- <a href="#" data-popup="#slider-bazhir-village" class="item-portfolio__link button button_portf"><span>Ещё
+									фото...</span></a> -->
 						</div>
 					</div>
 				</div>
