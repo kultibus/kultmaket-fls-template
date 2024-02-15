@@ -32,7 +32,12 @@
     }
   }
   &__container {
-    @include adaptiveValue("padding-top", 171, 118.344);
+    // @include adaptiveValue("padding-top", 171, 118.344);
+		padding-top: 171px;
+		@media (max-width: $mobile) {
+			padding-top: 90px;
+
+		}
     flex: 1 1 auto;
     position: relative;
     display: flex;
@@ -354,11 +359,11 @@
     // 	}
     // }
 
-		.touch &>img {
-			display: none;
-		}
 		
   }
+	.touch & .item-portfolio__picture {
+		display: none;
+	}
 	
 	&__touch-slider {
 		width: 100%;
