@@ -153,13 +153,15 @@ class ScrollWatcher {
 		if (targetElement.dataset.watch === 'some value') {
 			// пишем уникальную специфику
 		}
-		// const parallax = document.querySelector('.parallax');
+		const parallax = document.querySelector('.parallax');
 		// const parallaxBg = document.querySelector('.parallax__bg');
+		const parallaxBody = document.querySelector('.parallax__body');
 		// const parallaxTop = document.querySelector('.parallax__top');
 		// const parallaxTitle = document.querySelector('.parallax__title');
 		if (entry.isIntersecting) {
 			// Видим объект
 			function setParallaxItemStyle(scrollTopPercent) {
+				parallaxBody.style.cssText = `transform: translate(0%,-${scrollTopPercent / 4}%);`;
 				// parallaxBg.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3}%);`;
 				// parallaxTop.style.cssText = `transform: translate(0%,-${scrollTopPercent / 3.5}%);`;
 				// parallaxTitle.style.cssText = `transform: translate(0%,-${scrollTopPercent / 0.7}%);`;

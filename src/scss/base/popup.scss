@@ -203,13 +203,12 @@ body::after {
     height: 100%;
     top: 0;
     left: 0;
-		
   }
   &__slider {
     border-radius: 20px;
     height: 100%;
     overflow: hidden;
-		// margin: 20px 0;
+    // margin: 20px 0;
     @media (max-width: $mobile) {
       border-radius: 0;
     }
@@ -219,8 +218,10 @@ body::after {
   }
 }
 
-.swiper-wrapper{
-	height: 99% !important;
+.swiper-wrapper {
+  .item-portfolio__touch-slider & {
+    height: 98% !important;
+  }
 }
 
 // .swiper-pagination {
@@ -271,13 +272,20 @@ body::after {
   @media (max-width: $mobileSmall) {
     border-radius: 3px;
   }
-  &_projects {
+  .item-portfolio__touch-slider & {
     .touch & {
-			margin-top: 3px;
-			
+      margin-top: 3px;
+
       box-shadow: 0 0 5px #000;
     }
   }
+  // &_projects {
+  //   .touch & {
+  // 		margin-top: 3px;
+
+  //     box-shadow: 0 0 5px #000;
+  //   }
+  // }
   // @media (max-width: $mobileSmall) {
   // 	.touch & {
   // 		border-radius: 0;
