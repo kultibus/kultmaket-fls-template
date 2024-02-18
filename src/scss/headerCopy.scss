@@ -65,6 +65,7 @@
 		padding: 0px 10px;
 		line-height: math.div(40 , 14);
 		border-radius: em(15,14);
+		
 		border: em(2,14) solid transparent;
 		&:active{
 			background-color: $mainColor;

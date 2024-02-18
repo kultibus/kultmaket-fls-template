@@ -12,21 +12,27 @@ textarea {
 	@include adaptiveValue("font-size", 16, 14);
 	font-weight: 500;
 	background-color: $white;
-	border-radius: 0 !important;
+	// border-radius: 0 !important;
+	border-radius: 5px;
 	width: 100%;
 	display: block;
 	line-height: math.div(40 , 16);
-	border-bottom: 1px solid $grey1;
-	transition: border-bottom 0.3s ease 0s;
+	padding: 0 15px;
+	// border-bottom: 1px solid $grey1;
+	border: 1px solid $grey1;
+	// transition: border-bottom 0.3s ease 0s;
+	transition: border 0.3s ease 0s;
 	&::placeholder {
 		font-weight: 400;
 		color: $grey1;
 	}
 	&._form-focus {
-		border-bottom: 1px solid $mainColor;
+		// border-bottom: 1px solid $mainColor;
+		border: 1px solid $mainColor;
 	}
 	&._form-error {
-		border-bottom: 1px solid red;
+		// border-bottom: 1px solid red;
+		border: 1px solid red;
 		&::placeholder {
 			color: red;
 		}

@@ -1,90 +1,158 @@
 .footer {
-	position: relative;
-	background-color: $mainColor;
-	color: $white;
-	flex: 0 0 auto;
-	padding: 30px 0px;
-	&__container {
-	}
-	&__navigator {}
-	&__contacts {
-		margin-bottom: 40px;
-		@media (max-width:$mobileSmall){
-			margin-bottom: 30px;
-		}
-	}
-	&__copyright {
-		// display: flex;
-		// justify-content: space-between;
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 500;
-		@include adaptiveValue("font-size", 16, 10);
-	}
+  position: relative;
+  background-color: $mainColor;
+  color: $white;
+  flex: 0 0 auto;
+  padding-top: 30px;
+
+  @media (max-width: $mobile) {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__container {
+  }
+  &__navigator {
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+  }
+  &__contacts {
+    margin-bottom: 30px;
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
+    }
+  }
+  &__copyright {
+    // display: flex;
+    // justify-content: space-between;
+    // text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("font-size", 12, 8);
+    position: relative;
+    padding: 20px 0;
+
+    a {
+      span {
+        opacity: 0.5;
+        transition: opacity 0.4s ease;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      // padding: 10px 0;
+      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      // padding-top: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+    }
+  }
 }
 .contacts-footer {
-	&__links {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 15px;
-		margin-bottom: 30px;
-		@media (max-width:$mobileSmall){
-			margin-bottom: 20px;
-		}
-		.contacts-footer__link {
-			text-transform: uppercase;
-			font-weight: 500;
-			@include adaptiveValue("font-size", 19, 16);
-			transition: opacity 0.3s ease 0s;
-			@media (any-hover: hover){
-				&:hover{
-					opacity: .5;
-				}
-			}
-			&:nth-child(2) {
-				@include adaptiveValue("font-size", 21, 16);
-				// margin-bottom: 10px;
-				text-transform: lowercase;
-			}
-		}
-		// .contacts-footer__link {
-		// 	& :last-child {
-		// 		color: red;
-		// 	}
-		// }
-	}
-	&__social {
-		display: flex;
-		justify-content: center;
-		gap: 25px;
-		.contacts-footer__link {
-			transition: opacity 0.3s ease 0s;
-			@include adaptiveValue("font-size", 60, 30);
-			@media (any-hover: hover){
-				&:hover{
-					opacity: .5;
-				}
-			}
-		}
-	}
-	// &__details {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	gap: 10px;
-	// 	margin-bottom: 40px;
-	// 	@media (max-width:$mobileSmall){
-	// 		margin-bottom: 20px;
-	// 	}
-	// 	p {
-	// 		text-align: center;
-	// 		text-transform: uppercase;
-	// 		font-weight: 500;
-	// 		@include adaptiveValue("font-size", 19, 16);
-	// 		&:first-child{
-	// 			line-height: math.div(25 , 19);
-	// 		}
-	// 	}
-	// }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .contacts-footer__link {
+      text-transform: uppercase;
+      // font-weight: 500;
+      // font-weight: 300;
+      @include adaptiveValue("font-size", 21, 12);
+      transition: opacity 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      &:nth-child(2) {
+        // @include adaptiveValue("font-size", 21, 16);
+        // margin-bottom: 10px;
+        text-transform: lowercase;
+      }
+    }
+    // .contacts-footer__link {
+    // 	& :last-child {
+    // 		color: red;
+    // 	}
+    // }
+  }
+
+  &__2gis {
+    height: 320px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    @media (max-width: $mobile) {
+      gap: 10px;
+    }
+    .contacts-footer__link {
+      transition: opacity 0.3s ease 0s;
+      @include adaptiveValue("font-size", 60, 30);
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  // &__details {
+  // 	display: flex;
+  // 	flex-direction: column;
+  // 	align-items: center;
+  // 	gap: 10px;
+  // 	margin-bottom: 40px;
+  // 	@media (max-width:$mobileSmall){
+  // 		margin-bottom: 20px;
+  // 	}
+  // 	p {
+  // 		text-align: center;
+  // 		text-transform: uppercase;
+  // 		font-weight: 500;
+  // 		@include adaptiveValue("font-size", 19, 16);
+  // 		&:first-child{
+  // 			line-height: math.div(25 , 19);
+  // 		}
+  // 	}
+  // }
 }

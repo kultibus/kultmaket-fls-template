@@ -141,7 +141,6 @@ class Popup {
             !e.target.closest(".swiper-button-next") &&
             !e.target.closest(".swiper-pagination")
           ) {
-            console.log(e.target);
             if (!this.isOpen) this.lastFocusEl = buttonOpen;
             this.targetOpen.selector = `${this._dataValue}`;
             this._selectorOpen = true;

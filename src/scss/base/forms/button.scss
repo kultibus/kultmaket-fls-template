@@ -1,39 +1,62 @@
 .button {
-	display: inline-block;
-	// @include adaptiveValue("font-size", 14, 12);
-	@include adaptiveValue("font-size", 16, 12);
-	font-weight: 600;
-	text-transform: uppercase;
-	line-height: math.div(18 , 14);
-	border: em(1,14) solid $mainColor;
-	border-radius: em(30,14);
-	text-align: center;
-	padding: em(10, 14) em(10, 14);
-	transition: color 0.6s ease 0s, background-color 0.3s ease 0s;
-	box-shadow: 0 0 0px 0px rgba($mainColor, .4);
-	animation: pulse 1.5s infinite;
-	&_portf {
-		animation: none;
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			color: $white;
-			background-color: $mainColor;
-			animation: none;
-		}
-	}
+  // display: inline-block;
+  // @include adaptiveValue("font-size", 14, 12);
+  @include adaptiveValue("font-size", 16, 12);
+  font-weight: 500;
+  text-transform: uppercase;
+	color: $mainColor;
+  // line-height: math.div(18 , 14);
+  line-height: math.div(46, 16);
+  // border: em(1,14) solid $mainColor;
+  border: em(1, 16) solid $mainColor;
+  // border-radius: em(30,14);
+  border-radius: 5px;
+  text-align: center;
+  // padding: em(10, 14) em(10, 14);
+  padding: 0 em(15, 16);
+  // transition: color 3s ease 0s;
+  // background-color 0.3s ease 0,
+  // padding-left 0.3s ease 0s,
+  // padding-right 0.3s ease 0s;
+  // box-shadow: 0 0 0px 0px rgba($mainColor, .4);
+  box-shadow: 0 0 0px 0px rgba($mainColor, 0.4);
+  animation: pulse 1.2s infinite;
+	transition: all 0.3s ease 0s;
+  &_portf {
+    animation: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: $white;
+			border: em(1, 16) solid $white;
+
+      // background-color: $mainColor;
+			
+      animation: none;
+    }
+    .popup &:hover {
+      color: $mainColor;
+			border: em(1, 16) solid rgba($color: $mainColor, $alpha: 0.5);
+			opacity: 0.5;
+
+      // background-color: $mainColor;
+			
+      animation: none;
+    }
+  }
 }
 
 @keyframes pulse {
   0% {
-    transform: (scale(.98));
+    transform: (scale(0.99));
   }
-  85% {
+  95% {
     transform: (scale(1));
-    box-shadow: 0 0 50px 30px rgba($mainColor, 0);
+    // box-shadow: 0 0 50px 30px rgba($mainColor, 0);
+    box-shadow: 0 0 40px 20px rgba($mainColor, 0);
   }
-    100% {
-    transform: (scale(.98));
+  100% {
+    transform: (scale(0.99));
     box-shadow: 0 0 0 0 rgba($mainColor, 0);
   }
 }

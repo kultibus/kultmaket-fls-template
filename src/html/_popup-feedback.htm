@@ -10,14 +10,14 @@
 					<form action="sendmail.php" data-dev data-popup-message="#message" class="form-popup__body">
 						<ul class="form-popup__list">
 							<li class="form-popup__item"><input maxlength="20" autocomplete="off" type="text" name="name"
-									data-placeholder-nohide data-required placeholder="Ваше имя" class="form-popup__input input-form">
+									data-placeholder-nohide data-error="* Поле обязательно для заполнения" data-required placeholder="Ваше имя *" class="form-popup__input input-form">
 							</li>
 							<!-- <li class="form-popup__item"><input autocomplete="off" type="text" name="company" placeholder="Компания"
 									class="form-popup__input input-form"></li> -->
 
 							<li class="form-popup__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
-									data-required="email" data-placeholder-nohide data-error="Формат номера: 8-9ХХ-ХХХ-ХХ-ХХ"
-									placeholder="Ваш номер телефона" class="form-popup__input input-form"></li>
+									data-required="email" data-placeholder-nohide data-error="* Номер телефона в формате: 8-9ХХ-ХХХ-ХХ-ХХ"
+									placeholder="Номер телефона *" class="form-popup__input input-form"></li>
 
 							<!-- <li class="form-popup__item"><input autocomplete="off" type="email" name="email" data-required
 									placeholder="Почта" class="form-popup__input input-form"></li> -->

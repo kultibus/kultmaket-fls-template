@@ -94,7 +94,7 @@ class ScrollWatcher {
 			paramsWatch.threshold = paramsWatch.threshold.split(',');
 		}
 		configWatcher.threshold = paramsWatch.threshold;
-
+		
 		return configWatcher;
 	}
 	// Функция создания нового наблюдателя со своими настройками

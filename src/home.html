@@ -11,15 +11,35 @@
 
 		<main class="page">
 
-			<section id="parallax" class="page__parallax parallax" data-watch data-watch-threshold="prx">
-				<div id="parallax-navigator" class="parallax__navigator" data-watch="navigator"></div>
-				<div class="parallax__body" data-lp>
+			<section id="parallax" data-watch-threshold="0.5" data-watch="navigator" class="page__parallax parallax">
+				<div class="parallax__body" data-lp data-watch data-watch-threshold="prx">
+					<div class="parallax__bg" data-lp>
+						<img data-lp src="@img/parallax-bg.jpg" alt="Фон главной страницы" data-bg-image>
+					</div>
+					<div class="parallax__top">
+						<div class="parallax__label parallax__label_top">Создаём макеты под ваши задачи</div>
+						<ul class="parallax__list">
+							<li class="parallax__item parallax__item_1">- архитектурные</li>
+							<li class="parallax__item parallax__item_2">- промышленные</li>
+							<li class="parallax__item parallax__item_3">- градостроительные</li>
+							<li class="parallax__item parallax__item_4">- ландшафтные</li>
+							<li class="parallax__item parallax__item_5">- учебные</li>
+							<li class="parallax__item parallax__item_6">- концептуальные</li>
+							<li class="parallax__item parallax__item_7">- подарочные</li>
+						</ul>
+						<div class="parallax__label parallax__label_bottom">качественно и в срок!</div>
+					</div>
+					<h1 class="parallax__title"><span>Изготовление макетов на заказ<br>от 50000 рублей</span></h1>
+				</div>
+
+
+				<!-- <div class="parallax__body" data-lp>
 					<div class="parallax__bg">
 						<img src="@img/parallax-bg.jpg" alt="image" data-bg-image>
 					</div>
 					<div class="parallax__container">
 						<div class="parallax__top">
-							<div class="parallax__label parallax__label_top">СОЗДАЁМ МАКЕТЫ ПОД ВАШИ ЗАДАЧИ.</div>
+							<div class="parallax__label parallax__label_top">Создаём макеты под ваши задачи</div>
 							<ul class="parallax__list">
 								<li class="parallax__item parallax__item_1">- архитектурные</li>
 								<li class="parallax__item parallax__item_2">- промышленные</li>
@@ -29,32 +49,30 @@
 								<li class="parallax__item parallax__item_6">- концептуальные</li>
 								<li class="parallax__item parallax__item_7">- подарочные</li>
 							</ul>
-							<div class="parallax__label parallax__label_bottom">макеты качественно и в срок!</div>
+							<div class="parallax__label parallax__label_bottom">качественно и в срок!</div>
 						</div>
-						<h1 class="parallax__title"><span>Изготовление макетов на заказ от 50000 рублей.</span></h1>
+						<h1 class="parallax__title"><span>Изготовление макетов на заказ<br>от 50000 рублей</span></h1>
 					</div>
-				</div>
+				</div> -->
 			</section>
 
-			<section class="page__content content">
-				<div class="content__image-ibg"><img src="@img/info-bg.jpg" alt="image"></div>
+			<section id="page-content" class="page__content content" data-watch="navigator" data-watch-threshold="0.3">
+				<div class="content__image-ibg"><img src="@img/info-bg.jpg" alt="Фон Инфо секции"></div>
 				<div class="content__container">
 
-					<section id="info" class="content__info info">
-						<div class="info__navigator" data-watch="navigator" data-watch-threshold="0.4"></div>
-
-						<div class="info__body">
-							<h2 class="info__title title">Инфо</h2>
-
-							<div data-tabs class="info__tabs tabs">
+					<section class="content__info info">
+						<div class="info__body content__body">
+							<h2 class="content__title title">Инфо</h2>
+							<div data-tabs class="info__tabs tabs" data-tabs-animate>
 
 								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title subtitle _tab-active">Какие макеты мы изготавливаем?</button>
-									<button type="button" class="tabs__title subtitle">Какой макет заказать?</button>
+									<button data-tabs-title type="button" class="tabs__title subtitle _tab-active">Как мы изготавливаем
+										макеты?</button>
+									<button data-tabs-title type="button" class="tabs__title subtitle">Какой макет заказать?</button>
 								</nav>
 
 								<div data-tabs-body class="tabs__content">
-									<div class="tabs__body">
+									<div data-tabs-item class="tabs__body">
 
 										<ul class="tabs__text text">
 											<li>Стандартный макет представляет из себя детально проработанные масштабные модели зданий или
@@ -74,7 +92,7 @@
 										</ul>
 									</div>
 
-									<div class="tabs__body">
+									<div data-tabs-item class="tabs__body">
 										<ul class="tabs__text text">
 											<li>Каждый макет, в зависимости от назначения, можно отнести к определенной категории.</li>
 											<li>Если Вам требуется произвести впечатление на инвестора, укрепить авторитет компании и
@@ -87,31 +105,37 @@
 									</div>
 								</div>
 							</div>
+						</div>
+					</section>
 
-							<div class="info__advantages advantages">
-								<div class="advantages__slider swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="swiper-slide__item _icon-truck"><span>Организуем доставку в Ваш город</span></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper-slide__item _icon-calculator"><span>Оперативно рассчитаем стоимость
-													макета</span></div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper-slide__item _icon-marker"><span>Отчитаемся о ходе работ на любом этапе
-													изготовления макета</span></div>
-										</div>
+					<section class="content__advantages advantages">
+						<div class="advantages__body content__body">
+							<h2 class="content__title title">Наши преимущества</h2>
+							<div class="advantages__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="swiper-slide__icon _icon-truck"></div>
+										<div class="swiper-slide__text">Организуем доставку в ваш город</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__icon _icon-calculator"></div>
+										<div class="swiper-slide__text">Оперативно рассчитаем стоимость
+											макета</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="swiper-slide__icon _icon-marker"></div>
+										<div class="swiper-slide__text">Отчитаемся о ходе работ на любом этапе
+											изготовления макета</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
 
-					<section id="work-stages" class="content__work-stages work-stages">
-						<div class="work-stages__body">
+					<section class="content__work-stages work-stages">
+						<div class="work-stages__body content__body">
 
-							<h2 class="work-stages__title title">Как мы работаем?</h2>
+							<h2 class="content__title title">Как мы работаем?</h2>
 
 							<div data-spollers class="work-stages__spollers spollers">
 								<div class="spollers__item">
@@ -162,14 +186,15 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-prom-estet" class="item-portfolio__link-ibg">
-									<img class="item-portfolio__picture" src="@img/prom-estet/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/prom-estet/main.jpg"
+										alt="Промышленный макет нефтеперерабатывающего комплекса">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-prom-estet.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Архитектурный макет нефтеперерабатывающего комплекса с
-								подсветкой для компании ооо "Эстет"</div>
+							<div class="item-portfolio__title subtitle">Промышленный макет нефтеперерабатывающего комплекса с
+								подсветкой</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:100</p>
 								<p>Размер 1000мм на 700мм</p>
@@ -181,13 +206,15 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-turbaza-buryatia" class="item-portfolio__link-ibg">
-									<img class="item-portfolio__picture" src="@img/turbaza-buryatia/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/turbaza-buryatia/main.jpg"
+										alt="Макет турбазы на берегу озера Байкал">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-turbaza-buryatia.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Архитектурный макет турбазы в респ. Бурятия</div>
+							<div class="item-portfolio__title subtitle">Макет турбазы на берегу озера Байкал в республике Бурятия
+							</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:100</p>
 								<p>Размер 1000мм на 1000мм</p>
@@ -199,13 +226,14 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-prom-angarsk" class="item-portfolio__link-ibg">
-									<img src="@img/prom-angarsk/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/prom-angarsk/main.jpg"
+										alt="Учебный макет территории промзоны">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-prom-angarsk.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Учебный макет промзоны г. Ангарск</div>
+							<div class="item-portfolio__title subtitle">Учебный макет территории промзоны в Иркутской области</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:10000</p>
 								<p>Размер 1250мм на 1500мм</p>
@@ -217,13 +245,15 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-building-floor-irkutsk" class="item-portfolio__link-ibg">
-									<img src="@img/building-floor-irkutsk/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/building-floor-irkutsk/main.jpg"
+										alt="Архитектурный макет жилого дома">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-building-floor-irkutsk.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Архитектурный макет жилого дома г. Иркутск, фрагмент типового
+							<div class="item-portfolio__title subtitle">Архитектурный макет жилого дома в городе Иркутск, фрагмент
+								типового
 								этажа</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:100</p>
@@ -232,36 +262,20 @@
 							</div>
 						</div>
 
-						<div class="portfolio__item item-portfolio">
-							<div class="item-portfolio__image">
-								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
-								<div href="#" data-popup="#slider-district-ulan-ude" class="item-portfolio__link-ibg">
-									<img src="@img/district-ulan-ude/main.jpg" alt="image">
-									<div class="item-portfolio__touch-slider">
-										@@include('html/sliders/_slider-district-ulan-ude.htm',{})
-									</div>
-								</div>
-							</div>
-							<div class="item-portfolio__title subtitle">Градостроительный макет городского района г. Улан-Удэ</div>
-							<div class="item-portfolio__text text">
-								<p>Масштаб 1:300</p>
-								<p>Размер 1700мм на 2300мм</p>
-								<p>Срок изготовления 30 дней</p>
-							</div>
-						</div>
+
 
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-warm-lakes" class="item-portfolio__link-ibg">
-									<img src="@img/warm-lakes/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/warm-lakes/main.jpg" alt="Макет храмового комплекса">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-warm-lakes.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Градостроительный макет храмового комплекса турбаза "Теплые
-								озера"</div>
+							<div class="item-portfolio__title subtitle">Макет храмового комплекса турбазы "Теплые
+								озера" в Иркутской области</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:1000</p>
 								<p>Размер 1200мм на 700мм</p>
@@ -273,14 +287,15 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-farm-factory" class="item-portfolio__link-ibg">
-									<img src="@img/farm-factory/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/farm-factory/main.jpg"
+										alt="Макет фармацевтического завода">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-farm-factory.htm',{})
 									</div>
 								</div>
 							</div>
 							<div class="item-portfolio__title subtitle">Учебно-игровой разборный макет фармацевтического завода из
-								шести секций с подсветкой задний и дорог для VII Всероссийской GMP-конференции.</div>
+								шести секций с подсветкой задний и дорог для конференции</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:1000</p>
 								<p>Размер 1200мм на 700мм</p>
@@ -292,7 +307,8 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-cottage-village" class="item-portfolio__link-ibg">
-									<img src="@img/cottage-village/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/cottage-village/main.jpg"
+										alt="Макет коттеджного поселка">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-cottage-village.htm',{})
 									</div>
@@ -310,13 +326,14 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-college-irkutsk" class="item-portfolio__link-ibg">
-									<img src="@img/college-irkutsk/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/college-irkutsk/main.jpg" alt="Макет комплекса зданий">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-college-irkutsk.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Макет здания колледжа г. Иркутск</div>
+							<div class="item-portfolio__title subtitle">Макет комплекса зданий технологического колледжа в городе
+								Иркутск с подсветкой зданий</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:1000</p>
 								<p>Размер 1200мм на 700мм</p>
@@ -328,13 +345,14 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-mountains-village" class="item-portfolio__link-ibg">
-									<img src="@img/mountains-village/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/mountains-village/main.jpg"
+										alt="Ландшафтный макет посёлка">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-mountains-village.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Макет посёлка среди гор с мостиком и речкой.</div>
+							<div class="item-portfolio__title subtitle">Ландшафтный макет посёлка среди гор с мостиком и речкой</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:1000</p>
 								<p>Размер 1200мм на 700мм</p>
@@ -346,18 +364,38 @@
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-bazhir-village" class="item-portfolio__link-ibg">
-									<img src="@img/bazhir-village/main.jpg" alt="image">
+									<img class="item-portfolio__picture" src="@img/bazhir-village/main.jpg"
+										alt="Макет комплексной застройки">
 									<div class="item-portfolio__touch-slider">
 										@@include('html/sliders/_slider-bazhir-village.htm',{})
 									</div>
 								</div>
 							</div>
-							<div class="item-portfolio__title subtitle">Максимально бюджетный макет комплексной застройки территории с
-								условной детализацией.</div>
+							<div class="item-portfolio__title subtitle">Бюджетный макет комплексной застройки территории с
+								условной детализацией</div>
 							<div class="item-portfolio__text text">
 								<p>Масштаб 1:1000</p>
 								<p>Размер 1200мм на 700мм</p>
 								<p>Срок изготовления 21 день</p>
+							</div>
+						</div>
+
+						<div class="portfolio__item item-portfolio">
+							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
+								<div href="#" data-popup="#slider-district-ulan-ude" class="item-portfolio__link-ibg">
+									<img class="item-portfolio__picture" src="@img/district-ulan-ude/main.jpg" alt="image">
+									<div class="item-portfolio__touch-slider">
+										@@include('html/sliders/_slider-district-ulan-ude.htm',{})
+									</div>
+								</div>
+							</div>
+							<div class="item-portfolio__title subtitle">Градостроительный макет городского района в городе Улан-Удэ
+							</div>
+							<div class="item-portfolio__text text">
+								<p>Масштаб 1:300</p>
+								<p>Размер 1700мм на 2300мм</p>
+								<p>Срок изготовления 30 дней</p>
 							</div>
 						</div>
 					</div>

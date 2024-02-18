@@ -1,92 +1,109 @@
 .tabs {
-	// .tabs__navigation
-	min-height: 380px;
-	padding: 0px 40px;
-	@media (max-width:$mobileSmall){
-		padding: 0px 10px;
-	}
-	
-	&__navigation {
-		display: flex;
-		// justify-content: space-around;
-		justify-content: space-between;
-		gap: rem(15);
-		margin: 0px 0px 15px 0px;
-		@media (max-width:$mobileSmall){
-			margin: 0px 0px 10px 0px;
-		}
-	}
-	// .tabs__title
-	&__title {
-		flex: 1 0 50%;
-		color: rgb(45, 45, 45);
-		border-radius: 50px;
-		border: 1px solid rgb(45, 45, 45);
-		padding: rem(10) rem(15);
-		position: relative;
-		top: 0;
-		box-shadow: 0px 6px 5px 1px #181818;
-		top: -6px;
-		color: #181818;
-		transition: background-color 0.4s ease 0s,
-		box-shadow 0.4s ease 0s,
-		top 0.4s ease 0s;
-		@media (max-width:$mobile){
-			flex: 1 1 50%;
-			border-radius: 20px;
-		}
-		@media (any-hover: hover){
-			&:hover{
-				background-color: rgba(179, 179, 179, 0.836);
-			}
-		}
-		&._tab-active {
-			background-color: rgba(179, 179, 179, 0.836);
-			box-shadow: 0px 2px 1px 1px #181818;
-			top: -2px;
-		}
-	}
-	// .tabs__content
-	&__content {
+  // .tabs__navigation
+  // min-height: 380px;
+  // padding: 0px 40px;
+	// padding: 0 30px;
+  // @media (max-width: $mobile) {
+	// 	padding: 0 10px;
+	// 	margin: 0px 0px 20px 0px;
+  // }
 
-		padding: rem(10) rem(15);
-	}
-	// .tabs__body
-	&__body {
-		// max-width: rem(1000);
-		// margin: 0px auto;
-	}
-	&__text {
-		li {
-			position: relative;
-			padding: 0px 0px 0px 10px;
-			&:not(:last-child) {margin-bottom: em(10, 16);}
-			&::before{
-				content:'';
-				position: absolute;
-				width: 6px;
-				height: 6px;
-				top: 7px;
-				left: -3px;
-				border-radius: 50%;
-				background-color: $mainColor;
-			}
-		}
-	}
+  &__navigation {
+    display: flex;
+    // justify-content: space-around;
+    justify-content: space-between;
+    gap: rem(15);
+    margin: 0px 0px 15px 0px;
+    @media (max-width: $mobileSmall) {
+      // margin: 0px 0px 20px 0px;
+    }
+  }
+  // .tabs__title
+  &__title {
+    flex: 1 1 50%;
+    // color: rgb(45, 45, 45);
+    color: $mainColor;
+    // border-radius: 50px;
+    border-radius: 5px;
+    // border: 1px solid rgb(45, 45, 45);
+    border: 1px solid $mainColor;
+    padding: rem(10) rem(15);
+    position: relative;
+    // top: 0;
+    // box-shadow: 0px 6px 5px 1px #181818;
+    box-shadow: 0px 5px 6px -1px $mainColor;
+    top: -4px;
+    // color: #181818;
+    // transition: background-color 0.4s ease 0s,
+    // transition: color 0.4s ease 0s,
+    // box-shadow 0.4s ease 0s,
+    // top 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    @media (max-width: $mobile) {
+      flex: 1 1 50%;
+      // border-radius: 20px;
+      border-radius: 5px;
+      padding: rem(5) rem(5);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        // background-color: rgba(179, 179, 179, 0.836);
+        color: $white;
+        border: 1px solid $mainColor;
+        // box-shadow: 0px 5px 6px -1px $mainColor;
+      }
+    }
+    &._tab-active {
+      // background-color: rgba(179, 179, 179, 0.836);
+      box-shadow: none;
+      border: none;
+      // top: -2px;
+      top: 0;
+      &:hover {
+        // background-color: rgba(179, 179, 179, 0.836);
+        cursor: auto;
+        color: $mainColor;
+      }
+    }
+  }
+  // .tabs__content
+  &__content {
+    // padding: rem(10) rem(15);
+    // padding: rem(10) 0;
+
+    // margin: 0px 0px 30px 0px;
+    // @media (max-width: $mobileSmall) {
+    //   margin: 0px 0px 20px 0px;
+    // }
+  }
+  // .tabs__body
+  &__body {
+    // max-width: rem(1000);
+    // margin: 0px auto;
+  }
+  &__text {
+    li {
+      position: relative;
+      line-height: 1.2;
+      padding: 0px 0px 0px 15px;
+      &:not(:last-child) {
+        // margin-bottom: em(10, 14);
+        margin-bottom: 15px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 7px;
+        // left: -3px;
+        left: 0;
+        border-radius: 50%;
+        background-color: $mainColor;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //========================================================================================================================================================
 

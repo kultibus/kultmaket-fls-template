@@ -2,11 +2,20 @@
 
 .parallax {
   height: 100vh;
+  // height: 100%;
+  position: relative;
   &__navigator {
-    visibility: hidden;
-    pointer-events: none;
-    opacity: 0;
-    touch-action: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #000;
+    z-index: 500;
+    // visibility: hidden;
+    // pointer-events: none;
+    // opacity: 0;
+    // touch-action: none;
   }
   &__body {
     position: fixed;
@@ -33,11 +42,11 @@
   }
   &__container {
     // @include adaptiveValue("padding-top", 171, 118.344);
-		padding-top: 171px;
-		@media (max-width: $mobile) {
-			padding-top: 90px;
-
-		}
+    // padding-top: 171px;
+    // padding-top: 15%;
+    @media (max-width: $mobile) {
+      // padding-top: 90px;
+    }
     flex: 1 1 auto;
     position: relative;
     display: flex;
@@ -153,10 +162,12 @@
   &__title {
     text-transform: uppercase;
     @include adaptiveValue("font-size", 55, 18);
+    // @include adaptiveValue("font-size", 55, 12);
     line-height: math.div(65, 55);
-    padding-top: em(30, 55);
-    margin-bottom: em(40, 55);
-    flex: 1 1 auto;
+    // padding-top: em(30, 55);
+    // margin-bottom: em(40, 55);
+    // flex: 1 1 auto;
+    flex: 0 1 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,7 +191,8 @@
 .content {
   box-shadow: 0 -5px 25px 3px #000000c8;
   position: relative;
-  padding: 80px 0px;
+  // padding: 80px 0px;
+  padding: 60px 0px;
   @media (max-width: $mobile) {
     padding: 40px 0px;
   }
@@ -191,10 +203,43 @@
     top: 0;
     left: 0;
   }
-  &__info {
-    margin: 0px 0px 80px 0px;
+
+	&__container {
+		section:not(:last-child) {
+			// margin-bottom: em(20, 36);
+			margin-bottom: 40px;
+		}
+
+	}
+	
+  &__body {
+		position: relative;
+    background-color: rgba(179, 179, 179, 0.836);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
+    // padding: 30px 0px 50px 0px;
+    padding: 30px 30px 60px 30px;
+    // border-radius: 30px;
+    border-radius: 5px;
+
+    @media (max-width: $mobile) {
+      border-radius: 0;
+      padding: 15px 10px 30px 10px;
+    }
+  }
+
+  &__title {
+    margin: 0px 0px 30px 0px;
     @media (max-width: $mobileSmall) {
-      margin: 0px 0px 40px 0px;
+      margin: 0px 0px 20px 0px;
+    }
+  }
+
+  &__info {
+    // margin: 0px 0px 80px 0px;
+    // margin: 0px 0px 30px 0px;
+    @media (max-width: $mobileSmall) {
+      // margin: 0px 0px 40px 0px;
+      // margin: 0px 0px 20px 0px;
     }
   }
 }
@@ -202,38 +247,45 @@
 .info {
   position: relative;
   &__body {
-    position: relative;
-    background-color: rgba(179, 179, 179, 0.836);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
-    padding: 30px 0px 50px 0px;
-    border-radius: 30px;
-    @media (max-width: $mobileSmall) {
-      border-radius: 0;
-      padding: 15px 0px 15px 0px;
-    }
   }
   &__title {
-    margin: 0px 0px em(30, 36) 0px;
+    // margin: 0px 0px em(30, 36) 0px;
+    // margin: 0px 0px 30px 0px;
+    // @media (max-width: $mobileSmall) {
+    // 	margin: 0px 0px 20px 0px;
+    // }
   }
 }
 .advantages {
-  padding: 15px 15px;
+  // padding: 15px 15px;
+  // padding: 15px 15px;
+  &__slider {
+    // height: 300px;
+  }
 }
+
 .swiper-slide {
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  &__icon {
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     &::before {
       @include adaptiveValue("font-size", 70, 30);
       margin: 0px 0px 20px 0px;
     }
-    span {
-      font-family: "Oswald";
-      text-align: center;
-      font-weight: 500;
-      @include adaptiveValue("font-size", 27, 16);
-    }
+  }
+  &__text {
+    font-family: "Oswald";
+    text-align: center;
+    padding-bottom: 5px;
+    // font-weight: 500;
+    // height: 100%;
+    @include adaptiveValue("font-size", 27, 16);
+    // @include adaptiveValue("font-size", 20, 16);
+    // margin: 0px 0px 20px 0px;
   }
 }
 
@@ -244,15 +296,16 @@
   @media (max-width: $mobileSmall) {
   }
   &__body {
-    position: relative;
-    background-color: rgba(179, 179, 179, 0.836);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
-    padding: 30px 0px 50px 0px;
-    border-radius: 30px;
-    @media (max-width: $mobileSmall) {
-      padding: 15px 0px 30px 0px;
-      border-radius: 0;
-    }
+    // position: relative;
+    // background-color: rgba(179, 179, 179, 0.836);
+    // box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
+    // padding: 30px 0px 50px 0px;
+    // // border-radius: 30px;
+    // border-radius: 5px;
+    // @media (max-width: $mobileSmall) {
+    //   padding: 15px 0px 30px 0px;
+    //   border-radius: 0;
+    // }
   }
   &__title {
     margin: 0px 0px em(30, 36) 0px;
@@ -264,16 +317,26 @@
 .portfolio {
   position: relative;
   background: $white;
-  padding: 50px 0px;
+  // padding: 50px 0px;
+  padding-top: 30px;
+  margin-bottom: 30px;
   @media (max-width: $mobile) {
-    padding: 25px 0px;
+    // padding: 25px 0px;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
   &__title {
-    margin: 0px 0px em(30, 36) 0px;
+    // margin: 0px 0px em(30, 36) 0px;
+    margin: 0px 0px 30px 0px;
+    @media (max-width: $mobile) {
+      // padding: 25px 0px;
+      margin: 0px 0px 20px 0px;
+    }
   }
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
     gap: rem(30);
     @media (max-width: $mobileSmall) {
       grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
@@ -292,12 +355,13 @@
   }
   &__image {
     box-shadow: 0 0 5px #000;
-		// background-color: rgba(0, 0, 0, 0.75);
+    // background-color: rgba(0, 0, 0, 0.75);
     position: relative;
     padding-bottom: 90%;
-    border-radius: 20px;
+    // border-radius: 20px;
+    border-radius: 5px;
     overflow: hidden;
-		cursor: pointer;
+    cursor: pointer;
     @media (max-width: $mobile) {
       padding-bottom: 60%;
     }
@@ -306,9 +370,9 @@
       padding-bottom: 85%;
     }
 
-		.touch & {
-			box-shadow: none;
-		}
+    .touch & {
+      box-shadow: none;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -358,22 +422,19 @@
     // 		transform: scale(1.1);
     // 	}
     // }
-
-		
   }
-	.touch & .item-portfolio__picture {
-		display: none;
-	}
-	
-	&__touch-slider {
-		width: 100%;
-		height: 100%;
-		display: none;
-		.touch & {
-			display: block;
-		}
+  .touch & .item-portfolio__picture {
+    display: none;
+  }
 
-	}
+  &__touch-slider {
+    width: 100%;
+    height: 100%;
+    display: none;
+    .touch & {
+      display: block;
+    }
+  }
   &__title {
     letter-spacing: -0.5px;
     padding: 0px 10px;
