@@ -59,9 +59,10 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-  // Скролл заблокирован
+	// Скролл заблокирован
+	background-color: $mainColor;
   .lock & {
-    background-color: $white;
+		background-color: $white;
     overflow: hidden;
     touch-action: none;
   }

@@ -374,10 +374,10 @@ $headerScrollHeightMobileSmall: 80px;
     gap: em(5, 14);
     @media (max-width: $tablet) {
       padding: 30px 0;
-			flex: 1 1 auto;
+      flex: 1 1 auto;
       flex-direction: column;
       align-items: center;
-			justify-content: center;
+      justify-content: center;
     }
     @media (max-width: $tablet) {
       padding: 10px 0;
@@ -395,9 +395,10 @@ $headerScrollHeightMobileSmall: 80px;
     // border-radius: 5px;
 
     border: 1px solid transparent;
-    transition:
-      color 0.4s ease 0s,
-      border 0.4s ease 0s;
+    // transition:
+    //   color 0.4s ease 0s,
+    //   border 0.4s ease 0s;
+    transition: opacity 0.4s ease 0s;
     color: $white;
     @media (max-width: $pc) {
       font-size: rem(14);
@@ -412,10 +413,11 @@ $headerScrollHeightMobileSmall: 80px;
     }
     @media (any-hover: hover) {
       &:hover {
-        color: $mainColor;
+        // color: $mainColor;
         @media (max-width: $tablet) {
-          background-color: $white;
-          color: $mainColor;
+          // background-color: $white;
+          // color: $mainColor;
+          opacity: 0.5;
         }
       }
     }

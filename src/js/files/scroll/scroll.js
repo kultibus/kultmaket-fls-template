@@ -14,8 +14,21 @@ export function pageNavigation() {
 	// Работаем при клике на пункт
 	document.addEventListener("click", pageNavigationAction);
 	// Если подключен scrollWatcher, подсвечиваем текущий пукт меню
-	document.addEventListener("watcherCallback", pageNavigationAction);
+	// document.addEventListener("watcherCallback", pageNavigationAction);
+	// document.addEventListener("scroll", highlightMenuItem);
+	document.addEventListener("click", highlightMenuItem);
 	// Основная функция
+
+
+	function highlightMenuItem(e) {
+		const elems = document.querySelectorAll('[data-watch="navigator"]')
+		const links = document.querySelectorAll('.menu__link')
+		elems.forEach(el => {
+			console.log(el.id, el.getBoundingClientRect().top)
+		});
+		// console.log(links)
+	}
+	
 	function pageNavigationAction(e) {
 		if (e.type === "click") {
 			const targetElement = e.target;
@@ -48,7 +61,7 @@ export function pageNavigation() {
 				}
 				if (entry.isIntersecting) {
 					// Видим объект
-					// navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
+					navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
 					navigatorCurrentItem ? navigatorCurrentItem.classList.add('_navigator-active') : null;
 				} else {
 					// Не видим объект
