@@ -10,6 +10,11 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  @media (max-width: $mobileSmall) {
+    // padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
   &__container {
   }
   &__navigator {

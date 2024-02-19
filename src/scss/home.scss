@@ -1,11 +1,40 @@
+.button-up {
+  position: fixed;
+  z-index: 1000;
+  // height: 100vh;
+  width: 100%;
+  // border: 10px solid #000;
+  pointer-events: none;
+  touch-action: none;
+  &__container {
+    // box-sizing: border-box;
+    height: 100vh;
+    position: relative;
+  }
+
+  &__btn {
+    pointer-events: all;
+    touch-action: auto;
+    position: absolute;
+    bottom: 7%;
+    right: 15px;
+		background-color: rgba($color: $grey, $alpha: 0.5);
+		font-weight: 500;
+		animation: none;
+    @media (max-width: $mobileSmall) {
+      right: 10px;
+    }
+  }
+}
+
 //====================================================================================================
 
 .parallax {
   height: 100vh;
   // height: 100%;
   // position: relative;
-	border: 10px solid #000;
-	// z-index: 2000;
+  border: 10px solid #000;
+  // z-index: 2000;
   &__navigator {
     position: absolute;
     top: 0;
@@ -13,15 +42,14 @@
     width: 100%;
     // height: 100%;
     height: 100vh;
-		padding: 10vh 0;
+    padding: 10vh 0;
     z-index: 500;
-		display: flex;
-		& div {
-			// flex: 0 1 100%;
-			border: 10px solid #000;
-
-		}
-		// margin: 20% 0;
+    display: flex;
+    & div {
+      // flex: 0 1 100%;
+      border: 10px solid #000;
+    }
+    // margin: 20% 0;
     // visibility: hidden;
     // pointer-events: none;
     // opacity: 0;
@@ -205,7 +233,7 @@
   // padding: 80px 0px;
   padding: 60px 0px;
   @media (max-width: $mobile) {
-    padding: 40px 0px;
+    padding: 30px 0px;
   }
   &__image-ibg {
     position: absolute;
@@ -215,16 +243,18 @@
     left: 0;
   }
 
-	&__container {
-		section:not(:last-child) {
-			// margin-bottom: em(20, 36);
-			margin-bottom: 40px;
-		}
+  &__container {
+    section:not(:last-child) {
+      // margin-bottom: em(20, 36);
+      margin-bottom: 40px;
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 
-	}
-	
   &__body {
-		position: relative;
+    position: relative;
     background-color: rgba(179, 179, 179, 0.836);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
     // padding: 30px 0px 50px 0px;
@@ -240,8 +270,9 @@
 
   &__title {
     margin: 0px 0px 30px 0px;
-    @media (max-width: $mobileSmall) {
-      margin: 0px 0px 20px 0px;
+    @media (max-width: $mobile) {
+      // margin: 0px 0px 20px 0px;
+      margin: 0px 0px 15px 0px;
     }
   }
 
@@ -303,7 +334,7 @@
 //========================================================================================================================================================
 
 .work-stages {
-  position: relative;
+  // position: relative;
   @media (max-width: $mobileSmall) {
   }
   &__body {
@@ -319,7 +350,7 @@
     // }
   }
   &__title {
-    margin: 0px 0px em(30, 36) 0px;
+    // margin: 0px 0px em(30, 36) 0px;
   }
 }
 
@@ -327,14 +358,12 @@
 
 .portfolio {
   position: relative;
-  background: $white;
+  background-color: $white;
   // padding: 50px 0px;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  padding: 30px 0;
   @media (max-width: $mobile) {
     // padding: 25px 0px;
-    padding-top: 20px;
-    margin-bottom: 20px;
+    // padding: 20px;
   }
   &__title {
     // margin: 0px 0px em(30, 36) 0px;

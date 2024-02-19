@@ -19,7 +19,8 @@ export let gotoBlock = (
     if (noHeader) {
       // headerItem = 'header.header';
       // headerItemHeight = document.querySelector(headerItem).offsetHeight;
-      const width = document.documentElement.offsetWidth;
+      // const width = document.documentElement.offsetWidth;
+      const width = document.documentElement.clientWidth;
 
       headerItemHeight =
         width > 1310

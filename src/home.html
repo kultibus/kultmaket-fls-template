@@ -9,16 +9,25 @@
 
 		@@include('html/_header.htm',{})
 
+		<div class="button-up">
+			<div class="button-up__container">
+
+				<button type="button" class="button-up__btn button">Наверх</button>
+			</div>
+		</div>
+
 		<main class="page">
 
-			<!-- <section id="parallax" data-watch-threshold="0.5" data-watch="navigator" class="page__parallax parallax"> -->
+
+
 			<section id="parallax" data-watch="navigator" class="page__parallax parallax">
-				
-				<div class="parallax__body" data-lp data-watch data-watch-threshold="prx">
+
+				<!-- <div class="parallax__body" data-lp data-watch data-watch-threshold="prx"> -->
+				<div class="parallax__body" data-lp>
 					<div class="parallax__bg" data-lp>
 						<img data-lp src="@img/parallax-bg.jpg" alt="Фон главной страницы" data-bg-image>
 					</div>
-					
+
 					<div class="parallax__top">
 						<div class="parallax__label parallax__label_top">Создаём макеты под ваши задачи</div>
 						<ul class="parallax__list">
@@ -59,7 +68,6 @@
 				</div> -->
 			</section>
 
-			<!-- <section id="page-content" class="page__content content" data-watch="navigator" data-watch-threshold="0.3"> -->
 			<section id="page-content" class="page__content content" data-watch="navigator">
 				<div class="content__image-ibg"><img src="@img/info-bg.jpg" alt="Фон Инфо секции"></div>
 				<div class="content__container">
@@ -179,7 +187,6 @@
 				</div>
 			</section>
 
-			<!-- <section id="portfolio" class="page__portfolio portfolio" data-watch="navigator" data-watch-threshold="0.15"> -->
 			<section id="portfolio" class="page__portfolio portfolio" data-watch="navigator">
 
 				<div class="portfolio__container">

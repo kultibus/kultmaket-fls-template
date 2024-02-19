@@ -236,7 +236,7 @@ export function formSubmit(options = { validate: true }) {
         }
       } else if (form.hasAttribute("data-dev")) {
         // Если режим разработки
-        // form.classList.add("_sending");
+        form.classList.add("_sending");
         e.preventDefault();
         formSent(form);
       }

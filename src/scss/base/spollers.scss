@@ -34,9 +34,9 @@
       .spollers__title:after {
         background-color: $white;
       }
-			.spollers__body{
-				// color: $white;
-			}
+      .spollers__body {
+        // color: $white;
+      }
       // background-color: rgba(179, 179, 179, 0.836);
       border: 1px solid $white;
     }
@@ -73,6 +73,10 @@
   }
   @media (max-width: $mobile) {
     padding: rem(5) rem(30);
+    // gap: 10px;
+  }
+  @media (max-width: em(400)) {
+    // letter-spacing: -2px;
     // gap: 10px;
   }
   ._spoller-init & {
@@ -114,7 +118,7 @@
 // Контент спойлера
 .spollers__body {
   padding: rem(20);
-	transition: color 0.4s ease;
+  transition: color 0.4s ease;
   // border-radius: rem(5);
   // border: 1px solid #eee;
 }

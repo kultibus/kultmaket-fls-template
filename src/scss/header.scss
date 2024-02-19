@@ -1,3 +1,5 @@
+
+
 //====================================================================================================
 $headerHeight: 150px;
 $headerScrollHeight: 120px;
@@ -175,7 +177,8 @@ $headerScrollHeightMobileSmall: 80px;
       // text-align: left;
     }
     @media (max-width: $mobileSmall) {
-      letter-spacing: -1px;
+      // letter-spacing: -1px;
+      letter-spacing: -0.6px;
     }
   }
 
@@ -398,7 +401,8 @@ $headerScrollHeightMobileSmall: 80px;
     // transition:
     //   color 0.4s ease 0s,
     //   border 0.4s ease 0s;
-    transition: opacity 0.4s ease 0s;
+    // transition: opacity 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
     color: $white;
     @media (max-width: $pc) {
       font-size: rem(14);
@@ -425,7 +429,7 @@ $headerScrollHeightMobileSmall: 80px;
       border: 1px solid $mainColor;
       color: $mainColor;
       @media (max-width: $tablet) {
-        border: 2px solid $white;
+        border: 1px solid $white;
         color: $white;
       }
     }
