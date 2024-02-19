@@ -6,24 +6,15 @@
   // border: 10px solid #000;
   pointer-events: none;
   touch-action: none;
+  // visibility: visible;
   &__container {
     // box-sizing: border-box;
     height: 100vh;
     position: relative;
   }
 
+
   &__btn {
-    pointer-events: all;
-    touch-action: auto;
-    position: absolute;
-    bottom: 7%;
-    right: 15px;
-		background-color: rgba($color: $grey, $alpha: 0.5);
-		font-weight: 500;
-		animation: none;
-    @media (max-width: $mobileSmall) {
-      right: 10px;
-    }
   }
 }
 

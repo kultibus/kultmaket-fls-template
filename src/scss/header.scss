@@ -62,7 +62,8 @@ $headerScrollHeightMobileSmall: 80px;
   &._header-scroll {
     height: $headerScrollHeight;
     // box-shadow: 0 0px 2px 1px #161616c8;
-    box-shadow: 0 1px 2px 0px #161616c8;
+    // box-shadow: 0 1px 2px 0px #161616c8;
+    box-shadow: 0 1px 2px 0px $mainColor;
     @media (max-width: $tablet) {
       height: $headerScrollHeightTablet;
     }
@@ -417,8 +418,9 @@ $headerScrollHeightMobileSmall: 80px;
     }
     @media (any-hover: hover) {
       &:hover {
-        // color: $mainColor;
+        color: $mainColor;
         @media (max-width: $tablet) {
+					color: $white;
           // background-color: $white;
           // color: $mainColor;
           opacity: 0.5;

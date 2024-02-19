@@ -116,6 +116,9 @@ export function pageNavigation() {
 export function headerScroll() {
   addWindowScrollEvent = true;
   const header = document.querySelector("header.header");
+
+  const buttonUp = document.querySelector(".button-up__btn");
+
   const headerShow = header.hasAttribute("data-scroll-show");
   const headerShowTimer = header.dataset.scrollShow
     ? header.dataset.scrollShow
@@ -136,15 +139,24 @@ export function headerScroll() {
           header.classList.contains("_header-show")
             ? header.classList.remove("_header-show")
             : null;
+          buttonUp.classList.contains("active")
+            ? buttonUp.classList.remove("active")
+            : null;
         } else {
           // upscroll code
           !header.classList.contains("_header-show")
             ? header.classList.add("_header-show")
             : null;
+          !buttonUp.classList.contains("active")
+            ? buttonUp.classList.add("active")
+            : null;
         }
         timer = setTimeout(() => {
           !header.classList.contains("_header-show")
             ? header.classList.add("_header-show")
+            : null;
+          !buttonUp.classList.contains("active")
+            ? buttonUp.classList.add("active")
             : null;
         }, headerShowTimer);
       }
@@ -155,6 +167,9 @@ export function headerScroll() {
       if (headerShow) {
         header.classList.contains("_header-show")
           ? header.classList.remove("_header-show")
+          : null;
+        buttonUp.classList.contains("active")
+          ? buttonUp.classList.remove("active")
           : null;
       }
     }
