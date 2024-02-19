@@ -75,7 +75,8 @@ body {
   overflow: hidden;
   // Прижимаем footer
   > main {
-		background-color: $white;
+		// background-color: $white;
+		background-color: $grey1;
     flex: 1 1 auto;
   }
   // Фикс для слайдеров
