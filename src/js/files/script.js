@@ -18,9 +18,12 @@ const parallaxBg = parallax.querySelector(".parallax__bg");
 const parallaxBody = parallax.querySelector(".parallax__body");
 
 const fn = () => {
-	const scrollTopPercent = (window.scrollY / parallax.offsetHeight) * 100;
-  parallaxBg.style.transform = `translateY(-${scrollTopPercent / 5}%)`;
-  parallaxBody.style.transform = `translateY(-${scrollTopPercent / 3}%)`;
+  if (document.documentElement.classList.contains(".touch")) {
+    const scrollTopPercent = (window.scrollY / parallax.offsetHeight) * 100;
+    parallaxBg.style.transform = `translateY(-${scrollTopPercent / 5}%)`;
+    parallaxBody.style.transform = `translateY(-${scrollTopPercent / 3}%)`;
+  }
 };
 
 document.addEventListener("scroll", fn);
+

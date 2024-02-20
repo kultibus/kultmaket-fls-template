@@ -40,7 +40,8 @@
     font-weight: 500;
     display: flex;
     justify-content: space-between;
-    @include adaptiveValue("font-size", 12, 8);
+    @include adaptiveValue("font-size", 12, 10);
+    line-height: 1;
     position: relative;
     padding: 20px 0;
 
@@ -92,7 +93,8 @@
       text-transform: uppercase;
       // font-weight: 500;
       // font-weight: 300;
-      @include adaptiveValue("font-size", 21, 12);
+      @include adaptiveValue("font-size", 21, 16);
+      line-height: 1.5;
       transition: opacity 0.3s ease 0s;
       @media (any-hover: hover) {
         &:hover {
@@ -113,29 +115,27 @@
   }
 
   &__2gis {
-		margin-bottom: 30px;
-		
+    margin-bottom: 30px;
+
     @media (max-width: $mobile) {
-			margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-		
-		
+
     @media (max-width: $mobileSmall) {
-			// padding-top: 20px;
+      // padding-top: 20px;
       padding-left: 10px;
       padding-right: 10px;
     }
   }
-	
-	&__2gis-box {
-		height: 500px;
-		border-radius: 10px;
-		overflow: hidden;
-		@media (max-width: $mobile) {
-			height: 300px;
-		}
-		
-	}
+
+  &__2gis-box {
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: $mobile) {
+      height: 300px;
+    }
+  }
 
   &__social {
     display: flex;

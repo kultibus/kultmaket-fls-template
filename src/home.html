@@ -304,6 +304,24 @@
 						<div class="portfolio__item item-portfolio">
 							<div class="item-portfolio__image">
 								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
+								<div href="#" data-popup="#slider-private-house" class="item-portfolio__link-ibg">
+									<img class="item-portfolio__picture" src="@img/private-house/main.jpg" alt="Макет интерьера коттеджа">
+									<div class="item-portfolio__touch-slider">
+										@@include('html/sliders/_slider-private-house.htm',{})
+									</div>
+								</div>
+							</div>
+							<div class="item-portfolio__title subtitle">Макет интерьера коттеджа со съёмной крышей</div>
+							<div class="item-portfolio__text text">
+								<p>Масштаб 1:1000</p>
+								<p>Размер 1200мм на 700мм</p>
+								<p>Срок изготовления 21 день</p>
+							</div>
+						</div>
+
+						<div class="portfolio__item item-portfolio">
+							<div class="item-portfolio__image">
+								<div class="item-portfolio__notation"><span>Ещё фото...</span></div>
 								<div href="#" data-popup="#slider-prom-angarsk" class="item-portfolio__link-ibg">
 									<img class="item-portfolio__picture" src="@img/prom-angarsk/main.jpg"
 										alt="Учебный макет территории промзоны">
@@ -508,6 +526,7 @@
 	</div>
 	@@include('html/_popup-feedback.htm',{})
 	@@include('html/_popup-message.htm',{})
+	@@include('html/_popup-slider-private-house.htm',{})
 	@@include('html/_popup-slider-novator.htm',{})
 	@@include('html/_popup-slider-uu-stal-most.htm',{})
 	@@include('html/_popup-slider-tets-irk.htm',{})

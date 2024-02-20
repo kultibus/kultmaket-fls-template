@@ -51,11 +51,14 @@
     @media (any-hover: hover) {
       &:hover {
         // top: -4px;
-        animation: push 1s ease 1;
+        // animation: push 1s ease 1;
         // background-color: rgba(179, 179, 179, 0.836);
         // color: $white;
         // border: 1px solid $mainColor;
         // box-shadow: 0px 5px 6px -1px $mainColor;
+
+        box-shadow: 0px 2px 2px 0px $mainColor;
+        top: -2px;
       }
     }
 
@@ -122,20 +125,20 @@
   }
 }
 
-@keyframes push {
-  0% {
-    box-shadow: 0px 5px 5px 0px $mainColor;
-    top: -5px;
-  }
-  50% {
-    box-shadow: 0px 1px 1px 0px $mainColor;
-    top: -1px;
-  }
-  100% {
-    box-shadow: 0px 5px 5px 0px $mainColor;
-    top: -5px;
-  }
-}
+// @keyframes push {
+//   0% {
+//     box-shadow: 0px 5px 5px 0px $mainColor;
+//     top: -5px;
+//   }
+//   50% {
+//     box-shadow: 0px 1px 1px 0px $mainColor;
+//     top: -1px;
+//   }
+//   100% {
+//     box-shadow: 0px 5px 5px 0px $mainColor;
+//     top: -5px;
+//   }
+// }
 @keyframes pushMobile {
   0% {
     box-shadow: 0px 5px 5px 0px $mainColor;
