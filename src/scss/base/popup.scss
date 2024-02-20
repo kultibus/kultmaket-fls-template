@@ -81,10 +81,15 @@ body::after {
     }
   }
   &__close {
-    @include adaptiveValue("font-size", 20, 14);
     width: 100%;
     text-align: right;
-    margin-bottom: 10px;
+		// align-self: end;
+    // margin-bottom: 10px;
+  }
+  &__close-btn {
+    @include adaptiveValue("font-size", 20, 20);
+		padding-left: 10px;
+		padding-bottom: 10px;
     transition: opacity 0.5s ease 0s;
     @media (any-hover: hover) {
       &:hover {
@@ -92,6 +97,8 @@ body::after {
       }
     }
   }
+
+
   &__title {
     text-align: center;
     // margin-bottom: 15px;

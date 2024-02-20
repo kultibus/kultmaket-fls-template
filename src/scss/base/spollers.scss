@@ -9,9 +9,20 @@
   @media (max-width: $mobileSmall) {
     // padding: 0px 10px;
   }
+
+	:first-child .spollers__title {
+		@media (max-width: $mobileSmall) {
+			// gap: 10px;
+			letter-spacing: -1.6px;
+		}
+
+	}
+	
 }
 // Спойлер
 .spollers__item {
+
+
   // font-size: rem(20);
   // border-radius: 30px;
   border-radius: 5px;
@@ -75,10 +86,10 @@
     padding: rem(5) rem(30);
     // gap: 10px;
   }
-  @media (max-width: em(400)) {
-    // letter-spacing: -2px;
-    // gap: 10px;
-  }
+
+	
+
+	
   ._spoller-init & {
     cursor: pointer;
     &::before,

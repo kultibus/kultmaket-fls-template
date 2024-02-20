@@ -18,13 +18,28 @@
 	$mail->Subject = 'Новый заказ на сайте';
 
 	//Тело письма
-	$body = '<h4>Обработать заявку на сайте kultmaket.ru</h4>';
+	$body = '<h4>Надо ответить человеку</h4>';
 
 	if(trim(!empty($_POST['name']))){
 		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
 	}	
+	if(trim(!empty($_POST['company']))){
+		$body.='<p><strong>Компания:</strong> '.$_POST['company'].'</p>';
+	}	
 	if(trim(!empty($_POST['tel']))){
 		$body.='<p><strong>Телефон:</strong> '.$_POST['tel'].'</p>';
+	}	
+	if(trim(!empty($_POST['email']))){
+		$body.='<p><strong>Почта:</strong> '.$_POST['email'].'</p>';
+	}	
+	if(trim(!empty($_POST['sizes']))){
+		$body.='<p><strong>Размеры макета:</strong> '.$_POST['sizes'].'</p>';
+	}	
+	if(trim(!empty($_POST['timelimit']))){
+		$body.='<p><strong>Срок изготовления макета:</strong> '.$_POST['timelimit'].'</p>';
+	}	
+	if(trim(!empty($_POST['message']))){
+		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
 	}	
 	
 	/*

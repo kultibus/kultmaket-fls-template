@@ -7,8 +7,8 @@
 
   @media (max-width: $mobile) {
     padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    // padding-left: 10px;
+    // padding-right: 10px;
   }
   @media (max-width: $mobileSmall) {
     // padding-top: 20px;
@@ -113,15 +113,29 @@
   }
 
   &__2gis {
-    height: 320px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    overflow: hidden;
-
+		margin-bottom: 30px;
+		
     @media (max-width: $mobile) {
-      margin-bottom: 20px;
+			margin-bottom: 20px;
+    }
+		
+		
+    @media (max-width: $mobileSmall) {
+			// padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
+	
+	&__2gis-box {
+		height: 500px;
+		border-radius: 10px;
+		overflow: hidden;
+		@media (max-width: $mobile) {
+			height: 300px;
+		}
+		
+	}
 
   &__social {
     display: flex;
