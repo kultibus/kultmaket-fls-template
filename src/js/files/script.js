@@ -17,13 +17,12 @@ const parallax = document.querySelector(".parallax");
 const parallaxBg = parallax.querySelector(".parallax__bg");
 const parallaxBody = parallax.querySelector(".parallax__body");
 
-const fn = () => {
-  if (document.documentElement.classList.contains(".touch")) {
+const prlx = () => {
+  if (!document.documentElement.classList.contains("touch")) {
     const scrollTopPercent = (window.scrollY / parallax.offsetHeight) * 100;
     parallaxBg.style.transform = `translateY(-${scrollTopPercent / 5}%)`;
     parallaxBody.style.transform = `translateY(-${scrollTopPercent / 3}%)`;
   }
 };
 
-document.addEventListener("scroll", fn);
-
+document.addEventListener("scroll", prlx);

@@ -1,15 +1,17 @@
 .button-up {
   position: fixed;
   z-index: 2;
-  // height: 100vh;
+  height: 100%;
   width: 100%;
   // border: 10px solid #000;
   pointer-events: none;
   touch-action: none;
   // visibility: visible;
   &__container {
+		height: 100%;
+		// width: 100%;
     // box-sizing: border-box;
-    height: 100vh;
+    // height: 100svh;
     position: relative;
   }
 }
@@ -17,7 +19,7 @@
 //====================================================================================================
 
 .parallax {
-  height: 100vh;
+  height: 100svh;
   // height: 100%;
   // position: relative;
   // z-index: 2000;

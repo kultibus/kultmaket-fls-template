@@ -73,6 +73,7 @@ $headerScrollHeightMobileSmall: 80px;
     @media (max-width: $mobileSmall) {
       height: $headerScrollHeightMobileSmall;
     }
+		
   }
   &::before {
     content: "";

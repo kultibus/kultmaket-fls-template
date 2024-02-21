@@ -77,6 +77,8 @@
       top: 0;
       &:hover {
         animation: none;
+        top: 0;
+        box-shadow: none;
         // background-color: rgba(179, 179, 179, 0.836);
         cursor: auto;
         // color: $mainColor;
