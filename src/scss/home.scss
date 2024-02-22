@@ -81,7 +81,7 @@
       // padding-bottom: $headerHeightPc;
     }
     @media (max-width: $tablet) {
-      padding-top: calc($headerHeightTablet + 20px);
+      // padding-top: calc($headerHeightTablet + 20px);
       padding-bottom: 20px;
       // padding-bottom: $headerHeightTablet;
     }
@@ -478,7 +478,7 @@
   }
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
     // grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
     gap: rem(30);
     @media (max-width: $mobileSmall) {
@@ -531,7 +531,7 @@
   }
 
   &__notation {
-    font-size: 27px;
+    font-size: rem(16);
     // line-height: math.div(45, 30);
     // font-weight: 700;
     // letter-spacing: -1px;

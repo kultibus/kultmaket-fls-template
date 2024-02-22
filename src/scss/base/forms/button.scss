@@ -1,5 +1,5 @@
 .button {
-  font-size: rem(18);
+  font-size: rem(16);
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1.2;
@@ -11,18 +11,18 @@
   animation: pulse 1.5s ease infinite;
   transition: all 0.4s ease 0s;
 	
-  @media (max-width: $tablet) {
-		font-size: rem(16);
-  }
+  // @media (max-width: $tablet) {
+	// 	font-size: rem(16);
+  // }
   @media (max-width: $mobile) {
 		animation: pulseMobile 1.5s ease infinite;
-    font-size: rem(15);
-		border: em(1, 16) solid $mainColor;
+    font-size: rem(14);
+		border: em(1, 14) solid $mainColor;
 		color: $mainColor;
   }
 
   @media (max-width: $mobileSmall) {
-    font-size: rem(14);
+    font-size: rem(12);
   }
 
 
@@ -161,6 +161,6 @@
 		box-shadow: 0 0 0px 0px rgba($color: $white, $alpha: 0);
   }
   100% {
-		box-shadow: 0 0 10px 10px rgba($color: $white, $alpha: 0.3);
+		box-shadow: 0 0 5px 5px rgba($color: $white, $alpha: 0.3);
   }
 }

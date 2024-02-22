@@ -1,5 +1,5 @@
 $headerHeight: 115px;
-$headerHeightTablet: 100px;
+$headerHeightMobile: 100px;
 $headerHeightMobileSmall: 85px;
 
 .header {
@@ -10,11 +10,8 @@ $headerHeightMobileSmall: 85px;
   left: 0;
   z-index: 50;
 
-  transition:
-    box-shadow 0.3s ease 0s,
-    opacity 0.6s ease 4.6s,
-    transform 0.6s ease 4.6s,
-    height 0.3s ease;
+  transition: box-shadow 0.3s ease 0s, opacity 0.6s ease 4.6s,
+    transform 0.6s ease 4.6s, height 0.3s ease;
   transform: translate(0px, -20%);
   opacity: 0;
 
@@ -30,14 +27,16 @@ $headerHeightMobileSmall: 85px;
     opacity: 1;
     transform: translate(0, 0);
   }
-  @media (max-width: $tablet) {
-    height: $headerHeightTablet;
+  @media (max-width: $mobile) {
+    height: $headerHeightMobile;
   }
   @media (max-width: $mobileSmall) {
     height: $headerHeightMobileSmall;
   }
   &._header-scroll {
-    box-shadow: 0 1px 2px 0px $mainColor;
+    &:before {
+      box-shadow: 0 2px 2px -1px $mainColor;
+    }
   }
 
   &::before {
@@ -59,6 +58,17 @@ $headerHeightMobileSmall: 85px;
     top: 0;
     left: 0;
     z-index: 1;
+    transition: box-shadow 0.4s ease;
+
+    .lock & {
+      width: calc(100% - 17px);
+      @media (max-width: $mobile) {
+        width: calc(100%);
+      }
+    }
+    .lock.touch & {
+      width: 100%;
+    }
   }
 
   &__container {
@@ -74,8 +84,9 @@ $headerHeightMobileSmall: 85px;
     flex-direction: column;
     // justify-content: center;
     // gap: rem(10);
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0;
     @media (max-width: $mobileSmall) {
+      padding: 10px 10px;
       // padding: 10px 10px 10px 10px;
     }
   }
@@ -87,6 +98,10 @@ $headerHeightMobileSmall: 85px;
     position: relative;
     margin-bottom: 5px;
     @media (max-width: $mobile) {
+      gap: 10px;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 5px;
     }
   }
   &__bottom {
@@ -97,17 +112,23 @@ $headerHeightMobileSmall: 85px;
     @media (max-width: $mobile) {
       gap: 0;
     }
+    @media (max-width: $mobileSmall) {
+      gap: 10px;
+    }
   }
   &__logo {
     flex: 0 0 rem(50);
     img {
       max-width: 100%;
     }
-    @media (max-width: $tablet) {
+    // @media (max-width: $tablet) {
+    //   flex: 0 0 rem(40);
+    // }
+    @media (max-width: $mobile) {
       flex: 0 0 rem(40);
     }
-    @media (max-width: $mobile) {
-      flex: 0 0 rem(35);
+    @media (max-width: $mobileSmall) {
+      flex: 0 0 rem(24);
     }
   }
   &__title {
@@ -125,17 +146,17 @@ $headerHeightMobileSmall: 85px;
     //     flex-grow: 1;
     //   }
     // }
-    @media (max-width: $tablet) {
-      font-size: rem(18);
-      // letter-spacing: -0.6px;
-    }
+    // @media (max-width: $tablet) {
+    //   font-size: rem(18);
+    // }
     @media (max-width: $mobile) {
       flex: 1 0 auto;
       font-size: rem(16);
       // letter-spacing: -0.6px;
     }
     @media (max-width: $mobileSmall) {
-      // letter-spacing: -0.6px;
+      font-size: rem(13);
+      letter-spacing: -0.99px;
     }
   }
 
@@ -170,14 +191,13 @@ $headerHeightMobileSmall: 85px;
   &__contacts {
     display: flex;
     gap: 10px;
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       // flex: 0 1 auto;
+      display: none;
     }
     & .contacts__link {
       @media (max-width: $mobile) {
         display: none;
-        &:not(:nth-child(2)) {
-        }
       }
       &:nth-child(3) {
         span {
@@ -209,44 +229,51 @@ $headerHeightMobileSmall: 85px;
     top: 0;
     left: 0;
     transform: translate(0, -100%);
-    transition:
-      transform 0.6s ease 0s,
-      height 0.3s ease 0s,
-      top 0.3s ease 0s;
-			overflow-y: auto;
-			pointer-events: none;
-			
+    transition: transform 0.6s ease 0s, height 0.3s ease 0s, top 0.3s ease 0s;
+    pointer-events: none;
+		touch-action: none;
+		
+    // &:before {
+			// 	content: "";
+			// 	display: block;
+			// 	min-height: $headerHeightMobile;
+			// 	width: 100%;
+			// }
 			.menu-open & {
 				transform: translate(0, 0);
 				pointer-events: all;
-			}
-  }
-
-  &__body {
-		@media (max-width: $mobile) {
-			background-color: $mainColor;
-      height: 100%;
-			width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-			&:before {
-				content: '';
-				min-height: $headerHeightTablet;
-			}
+				touch-action: auto;
     }
   }
 
+  &__body {
+    @media (max-width: $mobile) {
+      position: absolute;
+      top: $headerHeightMobile;
+      left: 0;
+      background-color: $mainColor;
+      height: calc(100% - $headerHeightMobile);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+    }
+    @media (max-width: $mobile) {
+      height: calc(100% - $headerHeightMobileSmall);
+      top: $headerHeightMobileSmall;
+    }
+  }
 
   &__list {
     // height: 100%;
-		flex: 0 0 100%;
+    flex: 0 0 100%;
     display: flex;
     // align-items: center;
     font-size: rem(14);
     gap: 5px;
     @media (max-width: $mobile) {
-      padding: 30px 0;
+      padding: 15px 0;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -261,13 +288,14 @@ $headerHeightMobileSmall: 85px;
     display: inline-block;
     padding: em(5, 14) em(5, 14);
     font-weight: 400;
-    // line-height: 1.2;
+    line-height: 1.2;
     border-radius: 5px;
 
     border: 1px solid transparent;
     transition: all 0.4s ease 0s;
     @media (max-width: $mobile) {
       font-size: rem(22);
+      padding: em(5, 22) em(5, 22);
       color: $white;
     }
     @media (max-width: $mobileSmall) {
@@ -345,5 +373,9 @@ $headerHeightMobileSmall: 85px;
     display: block;
     flex: 0 0 rem(30);
     height: rem(16);
+  }
+  @media (max-width: $mobileSmall) {
+    flex: 0 0 rem(25);
+    height: rem(14);
   }
 }
