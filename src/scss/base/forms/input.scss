@@ -9,7 +9,7 @@ textarea {
 	appearance: none;
 }
 .input-form {
-	@include adaptiveValue("font-size", 16, 14);
+	// @include adaptiveValue("font-size", 16, 14);
 	font-weight: 500;
 	background-color: $white;
 	// border-radius: 0 !important;

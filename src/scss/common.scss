@@ -4,30 +4,29 @@
 
 .contacts {
   &__link {
-    font-size: rem(22);
+    font-size: rem(20);
     text-transform: uppercase;
-    font-weight: 500;
-    display: inline-flex;
+    font-weight: 400;
+    display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
     span {
-      transition: all 0.3s ease 0s;
+			transition: all 0.4s ease 0s;
       // padding: 0px 0px 0px 5px;
-      font-size: rem(16);
+      font-size: rem(14);
     }
     &::before {
-    }
-
-		@media (max-width: $pc) {
-			// font-size: rem(18);
-			span {
-				font-size: rem(14);
-			}
 		}
+		
     @media (any-hover: hover) {
-      &:hover {
+			&:hover {
+				span {
+					color: $white;
+				}
         &::before {
-          transition: all 0.6s ease 0s;
+					// transition: transform 0.6s ease 0s;
+					transition: all 0.4s ease 0s;
+					color: $white;
           transform: rotateY(360deg);
         }
       }
@@ -38,7 +37,7 @@
 //========================================================================================================================================================
 
 .subtitle-popup {
-  @include adaptiveValue("font-size", 22, 16);
+  // @include adaptiveValue("font-size", 22, 16);
   font-weight: 600;
   line-height: math.div(24, 22);
 }
@@ -46,7 +45,7 @@
 //========================================================================================================================================================
 
 .title {
-  @include adaptiveValue("font-size", 30, 18);
+  // @include adaptiveValue("font-size", 30, 18);
   line-height: math.div(45, 30);
   font-weight: 700;
   letter-spacing: -1px;
@@ -54,13 +53,13 @@
 }
 
 .subtitle {
-  @include adaptiveValue("font-size", 22, 14);
+  // @include adaptiveValue("font-size", 22, 14);
   line-height: math.div(27, 22);
   font-weight: 600;
 }
 
 .text {
-  @include adaptiveValue("font-size", 18, 12);
+  // @include adaptiveValue("font-size", 18, 12);
   line-height: math.div(22, 18);
   font-weight: 500;
 }

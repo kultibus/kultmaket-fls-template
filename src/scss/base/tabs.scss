@@ -20,7 +20,7 @@
   }
   // .tabs__title
   &__title {
-    @include adaptiveValue("font-size", 45, 14);
+    // @include adaptiveValue("font-size", 45, 14);
     flex: 1 1 50%;
     // color: rgb(45, 45, 45);
     color: $mainColor;

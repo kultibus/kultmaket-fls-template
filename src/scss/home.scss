@@ -20,15 +20,16 @@
 
 .parallax {
   height: 100svh;
-  // height: 100%;
+  
   // position: relative;
   // z-index: 2000;
-
+	
   &__bg {
-    position: fixed;
+		position: fixed;
     width: 100%;
-    height: 100%;
+		height: 100svh;
     top: 0;
+		left: 0;
     // height: calc(100% - $headerScrollHeight);
     // top: $headerScrollHeight;
     // @media (max-width: $pc) {
@@ -47,7 +48,6 @@
     //   height: calc(100% - $headerScrollHeightMobileSmall);
     //   top: $headerScrollHeightMobileSmall;
     // }
-    left: 0;
     img {
       position: absolute;
       width: 100%;
@@ -61,7 +61,7 @@
   &__body {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100svh;
     top: 0;
     left: 0;
     // font-family: "Oswald";
@@ -76,7 +76,7 @@
     justify-content: space-around;
     overflow: auto;
     @media (max-width: $pc) {
-      padding-top: calc($headerHeightPc + 30px);
+      // padding-top: calc($headerHeightPc + 30px);
       // padding-bottom: 20px;
       // padding-bottom: $headerHeightPc;
     }
@@ -86,7 +86,7 @@
       // padding-bottom: $headerHeightTablet;
     }
     @media (max-width: $mobile) {
-      padding-top: calc($headerHeightMobile + 10px);
+      // padding-top: calc($headerHeightMobile + 10px);
       padding-bottom: 10px;
       // padding-bottom: 10px;
       // padding-bottom: $headerHeightMobile;
@@ -141,7 +141,7 @@
   }
 
   .tagline {
-    @include adaptiveValue("font-size", 48, 20);
+    // @include adaptiveValue("font-size", 48, 20);
     line-height: 1.5;
     font-family: "Oswald";
     // line-height: math.div(45, 36);
@@ -221,7 +221,7 @@
     }
   }
   &__item {
-    @include adaptiveValue("font-size", 25, 15);
+    // @include adaptiveValue("font-size", 25, 15);
     line-height: 1.2;
     letter-spacing: -0.25px;
     &:not(:last-child) {
@@ -277,7 +277,7 @@
   }
   &__title {
     text-transform: uppercase;
-    @include adaptiveValue("font-size", 50, 20);
+    // @include adaptiveValue("font-size", 50, 20);
     line-height: 1.5;
     font-family: "Oswald";
     font-weight: 500;
@@ -418,7 +418,7 @@
     // flex-direction: column;
     // align-items: center;
     &::before {
-      @include adaptiveValue("font-size", 70, 30);
+      // @include adaptiveValue("font-size", 70, 30);
       margin: 0px 0px 20px 0px;
     }
   }
@@ -428,7 +428,7 @@
     padding-bottom: 5px;
     // font-weight: 500;
     // height: 100%;
-    @include adaptiveValue("font-size", 27, 16);
+    // @include adaptiveValue("font-size", 27, 16);
     // @include adaptiveValue("font-size", 20, 16);
     // margin: 0px 0px 20px 0px;
   }

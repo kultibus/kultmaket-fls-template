@@ -133,9 +133,9 @@ export function headerScroll() {
       !header.classList.contains("_header-scroll")
         ? header.classList.add("_header-scroll")
         : null;
-      !document.documentElement.classList.contains("header-scroll")
-        ? document.documentElement.classList.add("header-scroll")
-        : null;
+      // !document.documentElement.classList.contains("header-scroll")
+      //   ? document.documentElement.classList.add("header-scroll")
+      //   : null;
       if (headerShow) {
         if (scrollTop > scrollDirection) {
           // downscroll code
@@ -167,9 +167,9 @@ export function headerScroll() {
       header.classList.contains("_header-scroll")
         ? header.classList.remove("_header-scroll")
         : null;
-      document.documentElement.classList.contains("header-scroll")
-        ? document.documentElement.classList.remove("header-scroll")
-        : null;
+      // document.documentElement.classList.contains("header-scroll")
+      //   ? document.documentElement.classList.remove("header-scroll")
+      //   : null;
       if (headerShow) {
         header.classList.contains("_header-show")
           ? header.classList.remove("_header-show")
