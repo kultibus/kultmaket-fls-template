@@ -11,24 +11,30 @@ textarea {
 .input-form {
 	// @include adaptiveValue("font-size", 16, 14);
 	font-weight: 500;
-	background-color: $white;
+	background-color: transparent;
 	// border-radius: 0 !important;
+	font-size: rem(14);
 	border-radius: 5px;
 	width: 100%;
-	display: block;
-	line-height: math.div(40 , 16);
-	padding: 0 15px;
+	// display: block;
+	line-height: 1.2;
+	padding: em(10,16) em(10,16);
 	// border-bottom: 1px solid $grey1;
-	border: 1px solid $grey1;
+	border: 1px solid $mainColor;
 	// transition: border-bottom 0.3s ease 0s;
-	transition: border 0.3s ease 0s;
+	transition: all 0.4s ease 0s;
+
+	@media (max-width:$mobileSmall) {
+		font-size: rem(12);
+	}
 	&::placeholder {
 		font-weight: 400;
-		color: $grey1;
+		color: $grey;
 	}
 	&._form-focus {
 		// border-bottom: 1px solid $mainColor;
-		border: 1px solid $mainColor;
+		// border: 1px solid $mainColor;
+		background-color: rgba($color: $mainColor, $alpha: 0.1);
 	}
 	&._form-error {
 		// border-bottom: 1px solid red;
@@ -37,11 +43,5 @@ textarea {
 			color: red;
 		}
 	}
-}
-textarea.input-form {
-	line-height: math.div(18 , 16);
-	min-height: 100px;
-	resize: vertical;
-	max-width: 100%;
 }
 

@@ -38,28 +38,28 @@
 
 .subtitle-popup {
   // @include adaptiveValue("font-size", 22, 16);
-  font-weight: 600;
-  line-height: math.div(24, 22);
+  // font-weight: 600;
+  // line-height: math.div(24, 22);
 }
 
 //========================================================================================================================================================
 
 .title {
   // @include adaptiveValue("font-size", 30, 18);
-  line-height: math.div(45, 30);
-  font-weight: 700;
-  letter-spacing: -1px;
-  text-align: center;
+  // line-height: math.div(45, 30);
+  // font-weight: 700;
+  // letter-spacing: -1px;
+  // text-align: center;
 }
 
 .subtitle {
   // @include adaptiveValue("font-size", 22, 14);
-  line-height: math.div(27, 22);
-  font-weight: 600;
+  // line-height: math.div(27, 22);
+  // font-weight: 600;
 }
 
 .text {
   // @include adaptiveValue("font-size", 18, 12);
-  line-height: math.div(22, 18);
-  font-weight: 500;
+  // line-height: math.div(22, 18);
+  // font-weight: 500;
 }

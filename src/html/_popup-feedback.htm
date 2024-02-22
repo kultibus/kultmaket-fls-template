@@ -1,33 +1,32 @@
-<div id="feedback" aria-hidden="true" class="popup popup-feedback">
+<div id="feedback" aria-hidden="true" class="popup feedback">
+<!-- <div id="feedback" aria-hidden="true" class="popup popup_feedback popup_show"> -->
 	<div class="popup__wrapper">
-		<div class="popup__content popup-feedback__content">
-			<div class="popup-feedback__close">
-
-				<button data-close type="button" class="popup-feedback__close-btn _icon-cross"></button>
-			</div>
-			<div class="popup__text popup-feedback__body">
-				<h2 class="popup-feedback__title subtitle-popup">Заполните пожалуйста форму и мы перезвоним в ближайшее время.
-				</h2>
-				<div class="popup-feedback__form form-popup">
-					<!-- <form action="sendmail.php" data-ajax data-popup-message="#message" class="form-popup__body"> -->
-					<form action="sendmail.php" data-dev data-popup-message="#message" class="form-popup__body">
-						<ul class="form-popup__list">
-							<li class="form-popup__item"><input maxlength="20" autocomplete="off" type="text" name="name"
-									data-placeholder-nohide data-error="Поле обязательно для заполнения" data-required
-									placeholder="Ваше имя *" class="form-popup__input input-form">
+		<div class="popup__body">
+			<div class="popup__close"><button data-close type="button" class="_icon-cross"></button></div>
+			<div class="popup__content">
+				<h3 class="popup__title">Заполните форму и мы перезвоним для уточнения
+					деталей заказа макета в ближайшее время
+				</h3>
+				<div class="popup__form form">
+					<!-- <form action="sendmail.php" data-ajax data-popup-message="#message" class="form__body"> -->
+					<form action="sendmail.php" data-dev data-popup-message="#message" class="form__body">
+						<ul class="form__list">
+							<li class="form__item"><input maxlength="20" autocomplete="off" type="text" name="name"
+									data-placeholder-nohide data-error="Поле обязательно для заполнения" data-required placeholder="Имя"
+									class="form__input input-form">
 							</li>
-							<li class="form-popup__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
+							<li class="form__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
 									data-required="email" data-placeholder-nohide data-error="Формат номера: 8-9ХХ-ХХХ-ХХ-ХХ"
-									placeholder="Номер телефона *" class="form-popup__input input-form"></li>
+									placeholder="Телефон" class="form__input input-form"></li>
 						</ul>
-						<div class="form-popup__button">
-							<button type="submit" class="form-popup__button button"><span>Отправить</span></button>
+						<div class="form__button popup__button">
+							<button type="submit" class="button">Отправить</button>
 						</div>
-						<div class="form-popup__checkbox checkbox">
-							<input id="formPopupAgreement" data-required checked type="checkbox" name="agreement"
-								class="checkbox__input">
-							<label for="formPopupAgreement" class="checkbox__label _icon-checkmark">Я даю своё согласие на обработку
-								персональных данных</label>
+						<div class="form__checkbox checkbox">
+							<input id="agreement" data-required checked type="checkbox" name="agreement" class="checkbox__input">
+							<label for="agreement" class="checkbox__label"><span class="_icon-checkmark"></span><span>Я даю своё
+									согласие на обработку
+									персональных данных</span></label>
 						</div>
 					</form>
 				</div>
