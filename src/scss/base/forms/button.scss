@@ -11,52 +11,70 @@
   animation: pulse 1.5s ease infinite;
   transition: all 0.4s ease 0s;
 
-	// display: block;
-
-  // @media (max-width: $tablet) {
-  // 	font-size: rem(16);
-  // }
-
-
-
+	@media (any-hover: hover) {
+		&:hover {
+			animation: pulseStop 0.4s ease 1 forwards;
+		}
+	}
+	
+	
+	
   @media (max-width: $mobile) {
-    animation: pulseBlack 1.5s ease infinite;
+		animation: pulseBlack 1.5s ease infinite;
     color: $mainColor;
     font-size: rem(14);
     border: em(1, 14) solid $mainColor;
+		@media (any-hover: hover) {
+			&:hover {
+				animation: pulseStopBlack 0.4s ease 1 forwards;
+			}
+		}
   }
 
   @media (max-width: $mobileSmall) {
     font-size: rem(12);
   }
 
-  &.button-up__btn {
+
+
+
+  .popup-show & {
+    animation-play-state: paused;
+  }
+
+	.popup__form &, .message & {
+    animation: pulseBlack 1.5s ease infinite;
+    color: $mainColor;
+    border: em(1, 14) solid $mainColor;
+		@media (any-hover: hover) {
+			&:hover {
+				animation-play-state: paused;
+				opacity: 0.5;
+			}
+		}
+  }
+
+	&.button-up__btn {
     visibility: hidden;
     opacity: 0;
 
     position: absolute;
-    bottom: 16lvh;
+    bottom: 100px;
     right: 15px;
     width: 50px;
-    height: 50px;
-    // background-color: rgba($color: $grey, $alpha: 0.9);
-    // background-color: rgba($white, $alpha: 0.8);
+    height: 45px;
     background-color: rgba($grey1, $alpha: 0.8);
-    // background-color: $white;
-    // color: $white;
-    border: 3px solid $white;
+    border: 1px solid $white;
     box-shadow: 0 0 0px 0px rgba($color: $white, $alpha: 0.3);
-    // padding: 0 em(30, 16);
-    // box-shadow: 0 0 5px 2px rgba($grey, 1);
     animation: none;
-    transform: translate(0, -150%);
+    transform: translate(0, -50%);
     transition: all 0.4s ease;
 
     &:before,
     &:after {
       content: "";
       position: absolute;
-      height: 3px;
+      height: 2px;
       width: 35%;
       top: 33.33%;
       // top: 0;
@@ -67,12 +85,12 @@
     &:before {
       left: 50%;
       transform-origin: right top;
-      transform: translate(-103%, 66.66%) rotateZ(-35deg);
+      transform: translate(-105%, 66.66%) rotateZ(-35deg);
     }
     &::after {
       right: 50%;
       transform-origin: left top;
-      transform: translate(103%, 66.66%) rotateZ(35deg);
+      transform: translate(105%, 66.66%) rotateZ(35deg);
     }
 
     @media (max-width: $mobileSmall) {
@@ -104,49 +122,14 @@
 
     @media (any-hover: hover) {
       &:hover {
-        // color: rgba($white, $alpha: 0.5);
-        // border: 3px solid rgba($white, $alpha: 0.5);
-        // color: $white;
-        border: 3px solid $white;
+        border: 1px solid $mainColor;
 
         &:before,
         &:after {
-          background-color: $white;
+          background-color: $mainColor;
         }
-        // border: none;
       }
     }
-  }
-
-  @media (any-hover: hover) {
-    &:hover {
-      animation: pulseStop 0.5s ease 1 forwards;
-    }
-    // .popup &:hover {
-    //   color: $white;
-    //   border: em(1, 16) solid rgba($color: $white, $alpha: 0.5);
-    //   opacity: 0.5;
-
-    //   // background-color: $white;
-
-    //   animation: none;
-    // }
-  }
-
-  .popup-show & {
-    animation-play-state: paused;
-  }
-
-	.popup__form &, .message & {
-    animation: pulseBlack 1.5s ease infinite;
-    color: $mainColor;
-    border: em(1, 14) solid $mainColor;
-		@media (any-hover: hover) {
-			&:hover {
-				animation-play-state: paused;
-				opacity: 0.5;
-			}
-		}
   }
 }
 
@@ -179,6 +162,6 @@
     box-shadow: 0 0 0px 0px rgba($color: $mainColor, $alpha: 0);
   }
   100% {
-    box-shadow: 0 0 5px 5px rgba($color: $mainColor, $alpha: 0.3);
+    box-shadow: 0 0 3px 3px rgba($color: $mainColor, $alpha: 0.3);
   }
 }

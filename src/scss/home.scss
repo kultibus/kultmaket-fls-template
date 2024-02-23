@@ -1,17 +1,12 @@
 .button-up {
   position: fixed;
   z-index: 2;
-  height: 100%;
+  height: 100svh;
   width: 100%;
-  // border: 10px solid #000;
   pointer-events: none;
   touch-action: none;
-  // visibility: visible;
   &__container {
 		height: 100%;
-		// width: 100%;
-    // box-sizing: border-box;
-    // height: 100svh;
     position: relative;
   }
 }
@@ -19,10 +14,8 @@
 //====================================================================================================
 
 .parallax {
-  height: 100svh;
+  height: 100lvh;
   
-  // position: relative;
-  // z-index: 2000;
 	
   &__bg {
 		position: fixed;
@@ -30,24 +23,6 @@
 		height: 100svh;
     top: 0;
 		left: 0;
-    // height: calc(100% - $headerScrollHeight);
-    // top: $headerScrollHeight;
-    // @media (max-width: $pc) {
-    //   height: calc(100% - $headerScrollHeightPc);
-    //   top: $headerScrollHeightPc;
-    // }
-    // @media (max-width: $tablet) {
-    //   height: calc(100% - $headerScrollHeightTablet);
-    //   top: $headerScrollHeightTablet;
-    // }
-    // @media (max-width: $mobile) {
-    //   height: calc(100% - $headerScrollHeightMobile);
-    //   top: $headerScrollHeightMobile;
-    // }
-    // @media (max-width: $mobileSmall) {
-    //   height: calc(100% - $headerScrollHeightMobileSmall);
-    //   top: $headerScrollHeightMobileSmall;
-    // }
     img {
       position: absolute;
       width: 100%;
@@ -67,29 +42,17 @@
     // font-family: "Oswald";
     color: $white;
     // font-weight: 500;
-    padding-top: calc($headerHeight + 30px);
-    padding-bottom: 30px;
-
+    padding-top: calc($headerHeight + 15px);
+    padding-bottom: 15px;
+		
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow: auto;
-    @media (max-width: $pc) {
-      // padding-top: calc($headerHeightPc + 30px);
-      // padding-bottom: 20px;
-      // padding-bottom: $headerHeightPc;
-    }
-    @media (max-width: $tablet) {
-      // padding-top: calc($headerHeightTablet + 20px);
-      padding-bottom: 20px;
-      // padding-bottom: $headerHeightTablet;
-    }
     @media (max-width: $mobile) {
-      // padding-top: calc($headerHeightMobile + 10px);
+			padding-top: calc($headerHeightMobile + 10px);
       padding-bottom: 10px;
-      // padding-bottom: 10px;
-      // padding-bottom: $headerHeightMobile;
 
       align-items: end;
     }
@@ -98,10 +61,8 @@
       // padding-left: 10px;
       // padding-right: 10px;
     }
-    @media (max-height: em(700)) {
+    @media (max-height: em(490)) {
       justify-content: start;
-      // padding-left: 10px;
-      // padding-right: 10px;
     }
   }
 
@@ -109,7 +70,7 @@
     // flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     margin-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
@@ -141,7 +102,7 @@
   }
 
   .tagline {
-    // @include adaptiveValue("font-size", 48, 20);
+		font-size: rem(40);
     line-height: 1.5;
     font-family: "Oswald";
     // line-height: math.div(45, 36);
@@ -155,6 +116,11 @@
     //   }
     //   text-align: center;
     // }
+
+		@media (max-width: $tablet) {
+			font-size: rem(32);
+    }
+		
     &_1 {
       text-transform: uppercase;
       font-weight: 500;
@@ -171,7 +137,7 @@
           position: absolute;
           height: 2px;
           width: 0;
-          bottom: 2px;
+          bottom: 1px;
           left: 0;
           background-color: $white;
           transition: width 0.3s ease 0.6s;
@@ -202,7 +168,7 @@
     }
   }
   &__list {
-    padding-top: 20px;
+    padding-top: 15px;
     text-align: right;
     // margin: 0px 0px em(20) 0px;
     color: $mainColor;
@@ -222,6 +188,7 @@
   }
   &__item {
     // @include adaptiveValue("font-size", 25, 15);
+		font-size: rem(18);
     line-height: 1.2;
     letter-spacing: -0.25px;
     &:not(:last-child) {
@@ -276,6 +243,7 @@
     }
   }
   &__title {
+		font-size: rem(40);
     text-transform: uppercase;
     // @include adaptiveValue("font-size", 50, 20);
     line-height: 1.5;
@@ -283,7 +251,10 @@
     font-weight: 500;
     padding-left: 15px;
     padding-right: 15px;
-
+		
+    @media (max-width: $tablet) {
+			font-size: rem(32);
+    }
     @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
