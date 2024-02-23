@@ -2,7 +2,7 @@
   font-size: rem(16);
   font-weight: 500;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 1.2;
   border: em(1, 16) solid $white;
   color: $white;
   border-radius: 5px;
@@ -94,8 +94,10 @@
     }
 
     @media (max-width: $mobileSmall) {
+			width: 40px;
+			height: 37px;
       right: 10px;
-      bottom: 80px;
+      bottom: 60px;
     }
     &.active {
       visibility: visible;

@@ -6,7 +6,7 @@
   pointer-events: none;
   touch-action: none;
   &__container {
-		height: 100%;
+    height: 100%;
     position: relative;
   }
 }
@@ -14,15 +14,14 @@
 //====================================================================================================
 
 .parallax {
-  height: 100lvh;
-  
-	
+  height: 100svh;
+
   &__bg {
-		position: fixed;
+    position: fixed;
     width: 100%;
-		height: 100svh;
+    height: 100svh;
     top: 0;
-		left: 0;
+    left: 0;
     img {
       position: absolute;
       width: 100%;
@@ -44,14 +43,14 @@
     // font-weight: 500;
     padding-top: calc($headerHeight + 15px);
     padding-bottom: 15px;
-		
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     overflow: auto;
     @media (max-width: $mobile) {
-			padding-top: calc($headerHeightMobile + 10px);
+      padding-top: calc($headerHeightMobile + 10px);
       padding-bottom: 10px;
 
       align-items: end;
@@ -102,9 +101,9 @@
   }
 
   .tagline {
-		font-size: rem(40);
+    font-size: rem(40);
     line-height: 1.5;
-    font-family: "Oswald";
+    font-family: "Oswald", sans-serif;
     // line-height: math.div(45, 36);
     // text-align: right;
     // &:not(:last-child) {
@@ -117,18 +116,19 @@
     //   text-align: center;
     // }
 
-		@media (max-width: $tablet) {
-			font-size: rem(32);
+    @media (max-width: $tablet) {
+      font-size: rem(32);
     }
-		
+    @media (max-width: em(550)) {
+      font-size: rem(20);
+    }
+
     &_1 {
       text-transform: uppercase;
       font-weight: 500;
       opacity: 0;
       transform: translate(-10%, 0px);
-      transition:
-        opacity 0.6s ease 0s,
-        transform 0.6s ease 0s;
+      transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
 
       span {
         position: relative;
@@ -140,12 +140,12 @@
           bottom: 1px;
           left: 0;
           background-color: $white;
-          transition: width 0.3s ease 0.6s;
+          transition: width 0.3s ease 0.3s;
         }
       }
 
       @media (max-width: $mobileSmall) {
-        letter-spacing: -0.75px;
+        letter-spacing: -1.2px;
       }
       .loaded & {
         transform: translate(0px, 0px);
@@ -158,9 +158,7 @@
     &_2 {
       opacity: 0;
       transform: translate(10%, 0);
-      transition:
-        opacity 0.3s ease 3.1s,
-        transform 0.3s ease 3.1s;
+      transition: opacity 0.3s ease 2.1s, transform 0.3s ease 2.1s;
       .loaded & {
         transform: translate(0px, 0px);
         opacity: 1;
@@ -188,12 +186,16 @@
   }
   &__item {
     // @include adaptiveValue("font-size", 25, 15);
-		font-size: rem(18);
+    font-size: rem(18);
     line-height: 1.2;
     letter-spacing: -0.25px;
+
     &:not(:last-child) {
       // margin-bottom: em(5, 22);
       // margin-bottom: 5px;
+    }
+    @media (max-width: em(550)) {
+      font-size: rem(16);
     }
     @media (max-width: $mobileSmall) {
       &:not(:last-child) {
@@ -203,39 +205,25 @@
     opacity: 0;
     transform: translate(0, -10%);
     &_1 {
-      transition:
-        opacity 0.3s ease 1s,
-        transform 0.3s ease 1s;
+      transition: opacity 0.2s ease 0.3s, transform 0.2s ease 0.3s;
     }
     &_2 {
-      transition:
-        opacity 0.3s ease 1.3s,
-        transform 0.3s ease 1.3s;
+      transition: opacity 0.2s ease 0.6s, transform 0.2s ease 0.6s;
     }
     &_3 {
-      transition:
-        opacity 0.3s ease 1.6s,
-        transform 0.3s ease 1.6s;
+      transition: opacity 0.2s ease 0.9s, transform 0.2s ease 0.9s;
     }
     &_4 {
-      transition:
-        opacity 0.3s ease 1.9s,
-        transform 0.3s ease 1.9s;
+      transition: opacity 0.2s ease 1.2s, transform 0.2s ease 1.2s;
     }
     &_5 {
-      transition:
-        opacity 0.3s ease 2.2s,
-        transform 0.3s ease 2.2s;
+      transition: opacity 0.2s ease 1.5s, transform 0.2s ease 1.5s;
     }
     &_6 {
-      transition:
-        opacity 0.3s ease 2.5s,
-        transform 0.3s ease 2.5s;
+      transition: opacity 0.2s ease 1.8s, transform 0.2s ease 1.8s;
     }
     &_7 {
-      transition:
-        opacity 0.3s ease 2.8s,
-        transform 0.3s ease 2.8s;
+      transition: opacity 0.2s ease 2.1s, transform 0.2s ease 2.1s;
     }
     .loaded & {
       transform: translate(0px, 0px);
@@ -243,22 +231,25 @@
     }
   }
   &__title {
-		font-size: rem(40);
+    font-size: rem(40);
     text-transform: uppercase;
     // @include adaptiveValue("font-size", 50, 20);
     line-height: 1.5;
-    font-family: "Oswald";
+    font-family: "Oswald", sans-serif;
     font-weight: 500;
     padding-left: 15px;
     padding-right: 15px;
-		
+
     @media (max-width: $tablet) {
-			font-size: rem(32);
+      font-size: rem(32);
     }
     @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
       text-align: right;
+    }
+    @media (max-width: em(550)) {
+      font-size: rem(20);
     }
 
     @media (max-width: $mobileSmall) {
@@ -267,9 +258,7 @@
     }
     transform: translate(0px, 10%);
     opacity: 0;
-    transition:
-      opacity 1.2s ease 3.8s,
-      transform 1.2s ease 3.8s;
+    transition: opacity 0.4s ease 2.4s, transform 0.4s ease 2.4s;
     .loaded & {
       opacity: 1;
       transform: translate(0, 0);
@@ -307,7 +296,7 @@
   // padding: 80px 0px;
   padding: 60px 0px;
   @media (max-width: $mobile) {
-    padding: 30px 0px;
+    padding: 40px 0px;
   }
   &__image-ibg {
     position: absolute;
@@ -332,18 +321,18 @@
     background-color: rgba(179, 179, 179, 0.836);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.546);
     // padding: 30px 0px 50px 0px;
-    padding: 30px 30px 60px 30px;
+    padding: 20px 30px 40px 30px;
     // border-radius: 30px;
     border-radius: 5px;
 
     @media (max-width: $mobile) {
-      border-radius: 0;
+      // border-radius: 0;
       padding: 15px 10px 30px 10px;
     }
   }
 
   &__title {
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 20px 0px;
     @media (max-width: $mobile) {
       // margin: 0px 0px 20px 0px;
       margin: 0px 0px 15px 0px;
@@ -375,8 +364,18 @@
 .advantages {
   // padding: 15px 15px;
   // padding: 15px 15px;
-  &__slider {
-    // height: 300px;
+  &__content {
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    @media (max-width: $tablet) {
+      // min-height: 120px;
+      // margin: 0px 0px 40px 0px;
+      // margin: 0px 0px 20px 0px;
+    }
+    @media (max-width: $mobile) {
+      // min-height: 110px;
+    }
   }
 }
 
@@ -385,19 +384,28 @@
   // flex-direction: column;
   &__icon {
     text-align: center;
+    // padding-bottom: 5px;
     // display: flex;
     // flex-direction: column;
     // align-items: center;
     &::before {
       // @include adaptiveValue("font-size", 70, 30);
-      margin: 0px 0px 20px 0px;
+      font-size: rem(50);
+      margin: 0px 0px 30px 0px;
+      @media (max-width: $tablet) {
+        // font-size: rem(55);
+        margin: 0px 0px 20px 0px;
+      }
+      @media (max-width: $mobile) {
+      }
     }
   }
   &__text {
-    font-family: "Oswald";
+    font-family: "Oswald", sans-serif;
+    font-size: rem(20);
     text-align: center;
     padding-bottom: 5px;
-    // font-weight: 500;
+    font-weight: 500;
     // height: 100%;
     // @include adaptiveValue("font-size", 27, 16);
     // @include adaptiveValue("font-size", 20, 16);
@@ -436,6 +444,7 @@
   // padding: 50px 0px;
   padding: 30px 0;
   @media (max-width: $mobile) {
+    padding: 20px 0;
     // padding: 25px 0px;
     // padding: 20px;
   }
@@ -449,39 +458,40 @@
   }
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
     // grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
-    gap: rem(30);
-    @media (max-width: $mobileSmall) {
-      grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
-      gap: rem(20);
+    // gap: rem(30);
+    gap: 15px;
+    @media (max-width: $mobile) {
+      gap: 10px;
     }
   }
 }
 .item-portfolio {
   display: grid;
-  grid-auto-flow: row;
+  // grid-auto-flow: row;
   // grid-template: auto 1fr auto auto  / 1fr;
   grid-template: auto 1fr auto / 1fr;
-  row-gap: rem(15);
+  // row-gap: rem(15);
+  row-gap: 10px;
   @media (max-width: $mobileSmall) {
-    row-gap: rem(10);
   }
   &__image {
-    box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 4px 0px $mainColor;
     // background-color: rgba(0, 0, 0, 0.75);
     position: relative;
-    padding-bottom: 90%;
+    // padding-bottom: 90%;
+    padding-bottom: 85%;
     // border-radius: 20px;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
     @media (max-width: $mobile) {
-      padding-bottom: 60%;
+      // padding-bottom: 80%;
     }
     @media (max-width: $mobileSmall) {
-      border-radius: 0;
-      padding-bottom: 85%;
+      // border-radius: 0;
+      // padding-bottom: 85%;
     }
 
     .touch & {
@@ -491,7 +501,7 @@
     @media (any-hover: hover) {
       &:hover {
         .item-portfolio__link-ibg {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
         .item-portfolio__notation {
           visibility: visible;
@@ -502,8 +512,9 @@
   }
 
   &__notation {
-    font-size: rem(16);
-    // line-height: math.div(45, 30);
+    // font-size: rem(16);
+
+    line-height: 1.2;
     // font-weight: 700;
     // letter-spacing: -1px;
     color: $white;
@@ -517,12 +528,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease 0s;
+    transition: opacity 0.4s ease 0s;
   }
   &__link-ibg {
     position: absolute;
@@ -530,40 +541,55 @@
     height: 100%;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease 0s;
+    transition: transform 0.4s ease 0s;
     // @media (any-hover: hover){
     // 	&:hover{
     // 		transform: scale(1.1);
     // 	}
     // }
   }
-  .touch & .item-portfolio__picture {
-    display: none;
-  }
+	@media (max-width: $mobile) {
+		.touch & .item-portfolio__picture {
+			display: none;
+		}
+	}
 
   &__touch-slider {
-    width: 100%;
+    // width: 100%;
     height: 100%;
     display: none;
-    .touch & {
-      display: block;
+		@media (max-width: $mobile) {
+			.touch & {
+				display: block;
+			}
     }
   }
   &__title {
-    letter-spacing: -0.5px;
-    padding: 0px 10px;
+    font-size: rem(14);
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: left;
+    @media (max-width: $mobileSmall) {
+			padding: 0px 10px;
+    }
+    // letter-spacing: -0.5px;
   }
   &__text {
-    padding: 0px 10px;
+		font-size: rem(14);
+    line-height: 1.2;
+		@media (max-width: $mobileSmall) {
+			padding: 0px 10px;
+		}
+    // padding: 0px 10px;
   }
-  &__link {
-    margin: 0px 10px;
-    max-width: rem(200);
-    @media (max-width: $mobile) {
-      max-width: 100%;
-      display: none;
-    }
-    // @media (max-width:$mobileSmall){
-    // }
-  }
+  // &__link {
+  //   margin: 0px 10px;
+  //   max-width: rem(200);
+  //   @media (max-width: $mobile) {
+  //     max-width: 100%;
+  //     display: none;
+  //   }
+  //   // @media (max-width:$mobileSmall){
+  //   // }
+  // }
 }

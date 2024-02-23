@@ -1,34 +1,32 @@
 <div id="feedback" aria-hidden="true" class="popup feedback">
 	<div class="popup__wrapper">
-		<div class="popup__body">
+		<div class="popup__content">
 			<div class="popup__close"><button data-close type="button" class="_icon-cross"></button></div>
-			<div class="popup__content">
-				<h3 class="popup__title">Заполните форму и мы перезвоним для уточнения
-					деталей заказа макета в ближайшее время
-				</h3>
-				<div class="popup__form form">
-					<!-- <form action="sendmail.php" data-ajax data-popup-message="#message" class="form__body"> -->
-					<form action="sendmail.php" data-dev data-popup-message="#message" class="form__body">
-						<ul class="form__list">
-							<li class="form__item"><input maxlength="20" autocomplete="off" type="text" name="name"
-									data-placeholder-nohide data-error="Поле обязательно для заполнения" data-required placeholder="Имя"
-									class="form__input input-form">
-							</li>
-							<li class="form__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
-									data-required="email" data-placeholder-nohide data-error="Формат номера: 8-9ХХ-ХХХ-ХХ-ХХ"
-									placeholder="Телефон" class="form__input input-form"></li>
-						</ul>
-						<div class="form__button popup__button">
-							<button type="submit" class="button">Отправить</button>
-						</div>
-						<div class="form__checkbox checkbox">
-							<input id="agreement" data-required checked type="checkbox" name="agreement" class="checkbox__input">
-							<label for="agreement" class="checkbox__label"><span class="_icon-checkmark"></span><span>Я даю своё
-									согласие на обработку
-									персональных данных</span></label>
-						</div>
-					</form>
-				</div>
+			<h3 class="popup__title">Заполните форму и мы перезвоним для уточнения
+				деталей заказа макета в ближайшее время
+			</h3>
+			<div class="popup__form form">
+				<!-- <form action="sendmail.php" data-ajax data-popup-message="#message" class="form__body"> -->
+				<form action="sendmail.php" data-dev data-popup-message="#message" class="form__body">
+					<ul class="form__list">
+						<li class="form__item"><input maxlength="20" autocomplete="off" type="text" name="name"
+								data-placeholder-nohide data-error="Поле обязательно для заполнения" data-required placeholder="Имя"
+								class="form__input input-form">
+						</li>
+						<li class="form__item"><input autocomplete="off" maxlength="16" type="tel" name="tel"
+								data-required="email" data-placeholder-nohide data-error="Формат номера: 8-9ХХ-ХХХ-ХХ-ХХ"
+								placeholder="Телефон" class="form__input input-form"></li>
+					</ul>
+					<div class="form__button popup__button">
+						<button type="submit" class="button">Отправить</button>
+					</div>
+					<div class="form__checkbox checkbox">
+						<input id="agreement" data-required checked type="checkbox" name="agreement" class="checkbox__input">
+						<label for="agreement" class="checkbox__label"><span class="_icon-checkmark"></span><span>Я даю своё
+								согласие на обработку
+								персональных данных</span></label>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

@@ -45,7 +45,9 @@ body::after {
     height: 100%;
   }
 
-  &__body {
+  &__content {
+    // pointer-events: all;
+    // touch-action: auto;
     .popup.feedback &,
     .popup.message & {
       background-color: $white;
@@ -56,6 +58,30 @@ body::after {
 
       @media (max-width: $mobileSmall) {
         padding: 10px;
+      }
+    }
+    .popup.carusel & {
+      width: 80%;
+      height: 90%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+
+      @media (max-width: $tablet) {
+        width: 90%;
+        height: 80%;
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
+        height: 80%;
+      }
+      @media (max-height: em(600)) {
+        width: 80%;
+        height: 100%;
+      }
+      @media (max-width: $mobileSmall) {
+        height: 60%;
+        // padding: 10px;
       }
     }
   }
@@ -69,15 +95,30 @@ body::after {
 
   &__close {
     text-align: right;
+    cursor: pointer;
     button {
-      padding-left: 10px;
-      padding-bottom: 10px;
+      padding: 0 0 10px 10px;
 
       transition: opacity 0.4s ease;
+    }
+    @media (any-hover: hover) {
+      &:hover button {
+        opacity: 0.5;
+      }
+    }
+    .carusel & {
+      color: $white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      button {
+        font-size: rem(25);
 
-      @media (any-hover: hover) {
-        &:hover {
-          opacity: 0.5;
+        padding: 20px 20px 0 0;
+        @media (max-width: $mobile) {
+          font-size: rem(16);
+          padding: 10px 10px 0 0;
         }
       }
     }
@@ -111,101 +152,121 @@ body::after {
   }
 }
 
-.popup__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
 //========================================================================================================================================================
 
-.popup-slider {
+.swiper {
+  height: 100%;
+}
+.swiper-wrapper {
+}
+
+.swiper-slide {
   // padding: 10px;
-  // padding: 100px;
-  &__content {
-    width: 100%;
-    // max-width: rem(750);
-    max-width: $tablet;
-    flex: 1 1 auto;
-    position: relative;
+  .item-portfolio__touch-slider & {
+    padding-bottom: 5px;
   }
-  &__close {
-    position: absolute;
-    width: rem(30);
-    height: rem(30);
-    top: 2%;
-    right: 2%;
-    z-index: 2;
-    transition: transform 0.3s ease 0s;
-    .touch & {
-      width: rem(30);
-      height: rem(30);
-    }
-    @media (max-width: $mobile) {
-      width: rem(30);
-      height: rem(30);
-    }
-    &::before,
-    &::after {
-      content: "";
-      background-color: $white;
-      position: absolute;
-      width: 100%;
-      height: rem(4);
-      top: 50%;
-      left: 0;
-      @media (max-width: $mobile) {
-        height: rem(3);
-      }
-    }
-    &::before {
-      transform-origin: center;
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform-origin: center;
-      transform: rotate(-45deg);
-    }
-    @media (any-hover: hover) {
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  }
-  &__body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  &__slider {
-    // border-radius: 20px;
+  &__image-ibg {
     border-radius: 5px;
-    height: 100%;
     overflow: hidden;
-    // margin: 20px 0;
-    @media (max-width: $mobile) {
-      border-radius: 0;
+    .item-portfolio__touch-slider & {
+      margin: 3px;
+      box-shadow: 0 0px 5px 0px $mainColor;
     }
-    .touch & {
-      border-radius: 0;
-    }
+
+    height: 100%;
   }
+}
+
+.slider {
+  // height: 100%;
+  // position: absolute;
+  // height: 100%;
+  // width: 100%;
+  // top: 0;
+  // left: 0;
+  // &__content {
+  //   width: 100%;
+  //   // max-width: rem(750);
+  //   max-width: $tablet;
+  //   flex: 1 1 auto;
+  //   // position: relative;
+  // }
+  // &__close {
+  //   position: absolute;
+  //   width: rem(50);
+  //   height: rem(30);
+  //   top: 2%;
+  //   right: 2%;
+  //   z-index: 2;
+  //   transition: transform 0.3s ease 0s;
+  //   .touch & {
+  //     width: rem(30);
+  //     height: rem(30);
+  //   }
+  //   @media (max-width: $mobile) {
+  //     width: rem(30);
+  //     height: rem(30);
+  //   }
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     background-color: $white;
+  //     position: absolute;
+  //     width: 100%;
+  //     height: rem(4);
+  //     top: 50%;
+  //     left: 0;
+  //     @media (max-width: $mobile) {
+  //       height: rem(3);
+  //     }
+  //   }
+  //   &::before {
+  //     transform-origin: center;
+  //     transform: rotate(45deg);
+  //   }
+  //   &::after {
+  //     transform-origin: center;
+  //     transform: rotate(-45deg);
+  //   }
+  //   @media (any-hover: hover) {
+  //     &:hover {
+  //       transform: scale(1.2);
+  //     }
+  //   }
+  // }
+  // &__body {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  // }
+  // &__slider {
+  //   // border-radius: 20px;
+  //   border-radius: 5px;
+  //   height: 100%;
+  //   overflow: hidden;
+  //   // margin: 20px 0;
+  //   @media (max-width: $mobile) {
+  //     border-radius: 0;
+  //   }
+  //   .touch & {
+  //     border-radius: 0;
+  //   }
+  // }
 }
 
 .swiper-wrapper {
-  .item-portfolio__touch-slider & {
-    height: 98% !important;
-  }
+  // .item-portfolio__touch-slider & {
+  //   height: 98% !important;
+  // }
 }
 
-// .swiper-pagination {
-//   .touch & {
-//     display: none;
-//   }
-// }
+.swiper-pagination {
+  .item-portfolio__touch-slider & {
+    display: none;
+  }
+}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -213,49 +274,70 @@ body::after {
   top: 50%;
   transform: translate(0px, -50%) scale(1);
   z-index: 1;
+  opacity: 0.7;
   // @include adaptiveValue("font-size", 80, 60);
   // @include adaptiveValue("font-size", 50, 30);
+  font-size: rem(40);
+  // font-weight: 700;
   color: $white;
-  transition: transform 0.3s ease 0s;
+  transition: transform 0.4s ease 0s, opacity 0.4s ease 0s;
+  padding: 10px;
   cursor: pointer;
   // .touch & {
   //   display: none;
   // }
   @media (any-hover: hover) {
     &:hover {
-      transform: translate(0px, -50%) scale(1.2);
+      transform: translate(0px, -50%) scale(1.1);
+      opacity: 1;
     }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: rem(35);
+    padding: 5x;
+  }
+  .item-portfolio__touch-slider & {
+    display: none;
   }
 }
 .swiper-button-prev {
-  left: 2%;
+  // left: 2%;
+  left: 15px;
+  @media (max-width: $mobile) {
+    left: 5px;
+  }
   &:active {
-    transform: translate(-20%, -50%) scale(1.2);
+    transform: translate(-20%, -50%) scale(1.05);
   }
 }
 .swiper-button-next {
-  right: 2%;
+  // right: 2%;
+  right: 15px;
+  @media (max-width: $mobile) {
+    right: 5px;
+  }
   &:active {
-    transform: translate(20%, -50%) scale(1.2);
+    transform: translate(20%, -50%) scale(1.05);
   }
 }
 .swiper-slide {
   // border-radius: 20px;
-  border-radius: 5px;
-  overflow: hidden;
-  &__image-ibg {
-    width: 100%;
-    height: 100%;
-  }
+  // border-radius: 5px;
+  // overflow: hidden;
+  // &__image-ibg {
+  //   width: 100%;
+  //   height: 100%;
+  // }
   @media (max-width: $mobileSmall) {
-    border-radius: 3px;
+    // border-radius: 3px;
   }
   .item-portfolio__touch-slider & {
-    .touch & {
-      margin-top: 3px;
+    // .touch & {
+    //   margin-top: 3px;
 
-      box-shadow: 0 0 5px #000;
-    }
+    //   box-shadow: 0 0 5px #000;
+    // }
   }
   // &_projects {
   //   .touch & {

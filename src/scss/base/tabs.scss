@@ -12,9 +12,10 @@
     display: flex;
     // justify-content: space-around;
     justify-content: space-between;
-    gap: rem(15);
+    gap: 15px;
     margin: 0px 0px 15px 0px;
-    @media (max-width: $mobileSmall) {
+    @media (max-width: $mobile) {
+			gap: 10px;
       // margin: 0px 0px 20px 0px;
     }
   }
@@ -65,7 +66,7 @@
     .touch & {
       // animation: name duration timing-function delay iteration-count direction fill-mode;
 
-      animation: pushMobile 1.8s ease infinite;
+      animation: pushMobile 2s ease infinite 1s;
     }
 
     &._tab-active {

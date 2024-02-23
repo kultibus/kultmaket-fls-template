@@ -114,10 +114,10 @@ function initSliders() {
       on: {},
     });
   }
-  if (document.querySelector(".popup-slider__slider")) {
+  if (document.querySelector(".carusel__slider")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
-    new Swiper(".popup-slider__slider", {
+    new Swiper(".carusel__slider", {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
@@ -193,17 +193,17 @@ function initSliders() {
         768: {
           // slidesPerView: 1,
           // spaceBetween: 60,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
         992: {
           // slidesPerView: 1,
           // spaceBetween: 120,
-          spaceBetween: 40,
+          spaceBetween: 10,
         },
         1268: {
           // slidesPerView: 1,
           // spaceBetween: 120,
-          spaceBetween: 40,
+          spaceBetween: 10,
         },
       },
       // События
