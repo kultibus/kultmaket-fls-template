@@ -19,12 +19,11 @@ const prlx = () => {
   const scrollTopPercent = (window.scrollY / parallax.offsetHeight) * 100;
   const bg = parallax.querySelector(".parallax__bg");
   const body = parallax.querySelector(".parallax__body");
-  if (scrollTopPercent < 100) {
+  if (scrollTopPercent < 100 && !document.documentElement.classList.contains("touch")) {
     bg.style.transform = `translateY(-${scrollTopPercent / 5}%)`;
     body.style.transform = `translateY(-${scrollTopPercent / 4}%)`;
   }
 };
-
 
 if (parallax) {
   document.addEventListener("scroll", prlx);
