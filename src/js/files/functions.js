@@ -26,11 +26,11 @@ export function addTouchClass() {
 }
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
-	document.documentElement.classList.add("lock")
+	// document.documentElement.classList.add("lock")
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-			document.documentElement.classList.remove("lock")
+			// document.documentElement.classList.remove("lock")
 		}, 500);
 	});
 }
