@@ -295,8 +295,8 @@
 //========================================================================================================================================================
 
 .content {
-  // box-shadow: 0 -5px 25px 3px #000000c8;
-  box-shadow: 0 -2px 100px -1px $mainColor;
+  // box-shadow: 0 -2px 100px -1px $mainColor;
+  // box-shadow: 0 -2px 10px -1px $mainColor;
   position: relative;
   // padding: 80px 0px;
   padding: 60px 0px;
@@ -309,6 +309,23 @@
     height: 100%;
     top: 0;
     left: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background: rgb(20, 20, 20);
+    background: linear-gradient(
+      0deg,
+      rgba(20, 20, 20, 0.5494572829131652) 0%,
+      rgba(20, 20, 20, 0) 100%
+    );
+    // z-index: 5;
   }
 
   &__container {

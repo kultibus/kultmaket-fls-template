@@ -165,6 +165,7 @@ export let bodyLock = (delay = 500) => {
 	// const backgroundImage = document.querySelector("[data-bg-image]");
 	if (bodyLockStatus) {
 		let lock_padding = document.querySelectorAll("[data-lp]");
+		console.log(window.innerWidth - document.querySelector('.wrapper').offsetWidth)
 		for (let index = 0; index < lock_padding.length; index++) {
 			const el = lock_padding[index];
 			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
